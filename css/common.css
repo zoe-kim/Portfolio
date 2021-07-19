@@ -167,8 +167,6 @@ body {
   overflow: hidden; }
 
 #topBtn {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   position: fixed;
   bottom: 30px;
   right: 30px;

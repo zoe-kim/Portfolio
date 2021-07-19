@@ -67,7 +67,6 @@ body{
 }
 #m_header{visibility: hidden;height: 0;overflow: hidden;}
 #topBtn{
-  @include transition(all 0.3s);
   position: fixed;bottom: 30px;right: 30px;width: 64px;height: 160px;display: none;
   .arrow_top{
     @include translateX-50;

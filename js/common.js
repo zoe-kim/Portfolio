@@ -10,7 +10,7 @@ $(document).ready(function () {
     else $('.header').removeClass('active');
 
     // 스크롤바의 수직이동거리가 100픽셀 이상이면  #topBtn에 fadeIn
-    if (scrollY >= 100) $('#topBtn').stop().fadeIn(3000);
+    if (scrollY >= 100) $('#topBtn').stop().fadeIn();
     else $('#topBtn').stop().fadeOut();
   });
 
