@@ -1,10 +1,27 @@
 @charset "utf-8";
 @import "_var", "_mixin";
 
+/* motion keyframes */
+@keyframes scroll {
+  0%, 100% {
+    -moz-transform:translateX(-50%) translateY(0);
+    -ms-transform:translateX(-50%) translateY(0);
+    -webkit-transform:translateX(-50%) translateY(0);
+    transform:translateX(-50%) translateY(0);
+  }
+  40%, 80% {
+    -moz-transform:translateX(-50%) translateY(10px);
+    -ms-transform:translateX(-50%) translateY(10px);
+    -webkit-transform:translateX(-50%) translateY(10px);
+    transform:translateX(-50%) translateY(10px);
+  }
+}
+
+
 // pc (1920px)
-body{height: 2000px;}
+body{height: 2000px;background: pink;}
 #cnt1{
-  height: 100vh;
+  height: 100vh;background: #fff;
   .wrap{
     height: 100%;
     h3{
@@ -12,7 +29,13 @@ body{height: 2000px;}
       position: absolute;top: 50%;left: 0; font-size: 26px;text-align: center;width: 100%;font-weight: 400;line-height: 1.7;
     }
     #scrollBtn{
-      
+      @include translateX-50;
+      position: absolute;bottom: 240px;left: 50%;width: 32px;height: 48px;border: 3px solid $black;border-radius: 20px;
+      &::after{
+        @include translateX-50;
+        @include animation(scroll 2s infinite);
+        content: "";position: absolute;top: 8px;left: 50%;width: 8px;height: 8px;background: $black;border-radius: 20px;
+      }
     }
   }
 }
