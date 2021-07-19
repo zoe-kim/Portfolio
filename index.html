@@ -5,55 +5,96 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Zoe’s Portfolio - web designer </title>
+  <title> Zoe’s Portfolio </title>
   <link rel="apple-touch-icon" href="images/common/favicon.ico">
   <link rel="shortcut icon" href="images/common/favicon.ico">
   <link rel="icon" href="images/common/favicon.ico">
-<link href="https://fonts.googleapis.com/css?family=DM+Sans:regular,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans:regular,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
 
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/common.js"></script>
 </head>
 
 <body>
 
-  <div class="navbar1">
-    <div class="logo">
-      <h1><a href="index.html" class="btn">LP</a></h1>
-    </div>
-    <div class="about">
-      <h1><a href="about.html" class="btn">about</a></h1>
-    </div>
-    <div class="works">
-      <h1><a href="works.html" class="btn">works</a></h1>
-    </div>
-  </div>
-  <div class="content">
-    <div class="content__text"><span class="content__text-inner">–hello.</span></div>
-  </div>
-  <div id="intro">
-    <video autoplay muted loop playsinline id="myVideo">
-      <source src="img/introM5.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="feet">
-    <div class="footer1">
-      <h1><a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=porracchia.luca@gmail.com"
-          target="_blank" rel="noopener noreferrer" class="btn">e-mail</a></h1>
-    </div>
-    <div class="footer2">
-      <h1><a href="https://www.instagram.com/likeaporro/?hl=it" target="_blank" rel="noopener noreferrer"
-          class="btn">Ig</a>,
-        <a href="https://www.behance.net/likeaporro" target="_blank" rel="noopener noreferrer" class="btn">Be</a>,
-        <a href="https://www.linkedin.com/in/luca-porracchia-86668914a/" target="_blank" rel="noopener noreferrer"
-          class="btn">in</a></h1>
-    </div>
+  <div id="skip">
+    <a href="#cnt2">본문 바로가기</a>
   </div>
 
-  <script src="js/blotter.min.js"></script>
-  <script src="js/materials/liquidDistortMaterial.js"></script>
-  <script src="js/imagesloaded.pkgd.min.js"></script>
-  <script src="js/demo2.js"></script>
+  <header id="pc_header" class="header shadow">
+    <div class="wrap">
+      <nav class="pc_nav">
+        <h1 class="logo">
+          <a href="index.html"><span class="blind">엔조잇 로고</span></a>
+        </h1>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Experience</a></li>
+          <li><a href="#">Awards</a></li>
+          <li><a href="#">Report</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="dark" type="button">
+        <i class="xi-moon"></i>
+        <span class="blind">다크 모드</span>
+      </button>
+    </div>
+  </header>
+  <header id="m_header" class="header shadow">
+    <h1 class="logo">
+      <a href="index.html"><span class="blind">엔조잇 로고</span></a>
+    </h1>
+    <button class="dark" type="button">
+      <span class="blind">다크 모드</span>
+    </button>
+    <nav class="m_nav">
+      <button class="menu_open" type="button">
+        <span class="blind">전체메뉴 열기</span>
+      </button>
+      <div class="menu_wrap">
+        <ul class="menu">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Experience</a></li>
+          <li><a href="#">Awards</a></li>
+          <li><a href="#">Report</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <button class="menu_close" type="button">
+          <img src="images/common/close_btn.png" alt="전체메뉴 닫기">
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <button id="topBtn" type="button">
+    <span class="blind">위로 가기</span>
+    <div class="arrow_top"></div>
+    <div class="arrow_btm"></div>
+  </button>
+
+  <section id="cnt1">
+    <h2 class="blind">메인 페이지</h2>
+    <div class="wrap">
+      <h3>
+        <p>My name is Zoe. </p>
+        <br>
+        <p>I do Web UX/UI design, </p>
+        <p>and creative development </p>
+        <p>based on web accessibility. </p>
+      </h3>
+      <button id="scrollBtn" type="button">
+        <span class="blind">본문으로 이동</span>
+      </button>
+    </div>
+  </section>
+
+  <footer id="footer">
+
+  </footer>
 
 </body>
 

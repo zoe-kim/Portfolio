@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import "_var", "_mixin";
+
+// tag reset
+body, h1, h2, h3, h4, p, ul, button{margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6{font-size: 100%;}
+ul{list-style: none;}
+address{font-style: normal;}
+a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
+img{border: none;vertical-align: top;max-width: 100%;}
+button{font-family: inherit;font-size: inherit;color: inherit;border: none;background: none;cursor: pointer;}
+header, nav, section, footer{display: block;}
+
+// common class
+.p_r{position: relative;}
+.p_a{position: absolute;}
+.blind{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
+.hidden{visibility: hidden;}
+.shadow{box-shadow: 0 8px 16px rgba(0,0,0,.1);}
+.wrap{position: relative;z-index: 1;}
+
+// skip navigation
+#skip a{
+  position: absolute;top: 0;left: -9999px;z-index: 1000;
+  &:focus{left: 0;width: 100%;height: 50px;line-height: 50px;color: #fff; font-weight: 700;background: $purple;text-align: center;}
+}
+
+// body
+body{
+  font-family: "DM Sans", "맑은 고딕", "Malgun Gothic", sans-serif;font-size: 16px;color: $black;line-height: 1;font-weight: 400;letter-spacing: -0.035em;
+  *{box-sizing: border-box;}
+}
+
+// pc (1920px)
+.header{
+  @include translateX-50;
+  @include transition(all 0.3s);
+  position: absolute;bottom: 60px;left: 50%;width: 85%;height: 64px;background: linear-gradient(to right, $purple, $green);border-radius: 24px;z-index: 900;
+  .wrap{
+    @include flex;
+    @include align-items;
+    @include justify-content(space-between);
+    margin: 0 20px;height: 64px;
+    .pc_nav{
+      @include flex;
+      @include align-items;
+      .logo a{display: block;width: 60px;height: 60px;background: url("../images/common/favicon.ico") no-repeat center / cover;}
+      ul{
+        @include flex;
+        @include align-items;
+        margin-left: 40px;
+        li{
+          a{display: block;font-size: 18px;line-height: 32px;padding: 0 14px;font-weight: 500;@include transition(all 0.3s);}
+          &:hover a, a:focus{color: #fff;@include transition(all 0.3s);}
+        }
+      }
+    }
+    .dark{
+      font-size: 32px;@include transition(all 0.3s);
+      &:hover, &:focus{color: $yellow;@include transition(all 0.3s);}
+    }
+  }
+}
+.header.active{
+  @include transform(translateX(0%));
+  position: fixed;top: 0;left: 0;width: 100%;border-radius: 0;
+}
+#m_header{visibility: hidden;height: 0;overflow: hidden;}
+#topBtn{
+  @include transition(all 0.3s);
+  position: fixed;bottom: 30px;right: 30px;width: 64px;height: 160px;display: none;
+  .arrow_top{
+    @include translateX-50;
+    @include transform(rotate(-45deg));
+    @include transition(all 0.3s);
+    position: absolute;top: 26px;left: 62%; width: 1px;height: 24px;background: $black;
+  }
+  .arrow_btm{
+    @include translateX-50;
+    @include transition(all 0.3s);
+    position: absolute;bottom: 30px;left: 50%;width: 1px;height: 100px;background: $black;
+  }
+  &:hover, &:focus{
+    .arrow_top{top: 6px;@include transition(all 0.3s);}
+    .arrow_btm{height: 120px;@include transition(all 0.3s);}
+  }
+}

@@ -1,0 +1,21 @@
+body {
+  height: 2000px; }
+
+#cnt1 {
+  height: 100vh; }
+  #cnt1 .wrap {
+    height: 100%; }
+    #cnt1 .wrap h3 {
+      -webkit-transform: translateY(-100%);
+      -moz-transform: translateY(-100%);
+      transform: translateY(-100%);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      font-size: 26px;
+      text-align: center;
+      width: 100%;
+      font-weight: 400;
+      line-height: 1.7; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,18 @@
+@charset "utf-8";
+@import "_var", "_mixin";
+
+// pc (1920px)
+body{height: 2000px;}
+#cnt1{
+  height: 100vh;
+  .wrap{
+    height: 100%;
+    h3{
+      @include transform(translateY(-100%));
+      position: absolute;top: 50%;left: 0; font-size: 26px;text-align: center;width: 100%;font-weight: 400;line-height: 1.7;
+    }
+    #scrollBtn{
+      
+    }
+  }
+}
