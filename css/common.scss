@@ -76,7 +76,7 @@ body{
         margin-left: 40px;
         li{
           a{display: block;font-size: 18px;line-height: 32px;padding: 0 14px;font-weight: 500;@include transition(all 0.3s);}
-          &:hover a, a:focus{color: #fff;@include transition(all 0.3s);}
+          &:hover a{color: #fff;@include transition(all 0.3s);}
         }
       }
     }
@@ -97,12 +97,12 @@ body{
     @include translateX-50;
     @include transform(rotate(-45deg));
     @include transition(all 0.3s);
-    position: absolute;top: 26px;left: 62%; width: 1px;height: 24px;background: $black;
+    position: absolute;top: 26px;left: 61%; width: 2px;height: 24px;background: $black;
   }
   .arrow_btm{
     @include translateX-50;
     @include transition(all 0.3s);
-    position: absolute;bottom: 30px;left: 50%;width: 1px;height: 100px;background: $black;
+    position: absolute;bottom: 30px;left: 50%;width: 2px;height: 100px;background: $black;
   }
   &:hover, &:focus{
     .arrow_top{top: 6px;@include transition(all 0.3s);}
@@ -110,6 +110,6 @@ body{
   }
   .round{
     @include animation(round 10s infinite linear);
-    position: absolute;bottom: -15%;left: 50%;width: 120px;opacity: .8;
+    position: absolute;bottom: -18%;left: 50%;width: 120px;
   }
 }

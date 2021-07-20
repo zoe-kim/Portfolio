@@ -196,7 +196,7 @@ body {
           font-weight: 500;
           -webkit-transition: all 0.3s;
           transition: all 0.3s; }
-        .header .wrap .pc_nav ul li:hover a, .header .wrap .pc_nav ul li a:focus {
+        .header .wrap .pc_nav ul li:hover a {
           color: #fff;
           -webkit-transition: all 0.3s;
           transition: all 0.3s; }
@@ -243,8 +243,8 @@ body {
     transition: all 0.3s;
     position: absolute;
     top: 26px;
-    left: 62%;
-    width: 1px;
+    left: 61%;
+    width: 2px;
     height: 24px;
     background: #1E1E1E; }
   #topBtn .arrow_btm {
@@ -256,7 +256,7 @@ body {
     position: absolute;
     bottom: 30px;
     left: 50%;
-    width: 1px;
+    width: 2px;
     height: 100px;
     background: #1E1E1E; }
   #topBtn:hover .arrow_top, #topBtn:focus .arrow_top {
@@ -272,9 +272,8 @@ body {
     -moz-animation: round 10s infinite linear;
     animation: round 10s infinite linear;
     position: absolute;
-    bottom: -15%;
+    bottom: -18%;
     left: 50%;
-    width: 120px;
-    opacity: .8; }
+    width: 120px; }
 
 /*# sourceMappingURL=common.css.map */
