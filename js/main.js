@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
   // #main
-  // #scrollBtn 버튼 클릭하면 스크롤바를 937(#about 위치)로 내림
+  // #scrollBtn 버튼 클릭하면 스크롤바를 #about 위치로 내림
   $('#scrollBtn').on('click', function () {
-    $('html, body').stop().animate({scrollTop: 937});
+    $('html, body').stop().animate({scrollTop: $('#about').offset().top}, 'slow');
   });
   
   // #about
@@ -17,7 +17,7 @@ $(document).ready(function () {
   // 생일 저장
   const birth = new Date(1997, 11, 27);
   const by = birth.getFullYear();
-  const bm = birth.getMonth();
+  const bm = birth.getMonth();    // 이미 반환 전 값(1 ~ 12월)으로 저장했으므로, +1 생략
   const bd = birth.getDate();
 
   // 나이 (올해의 연도 - 탄생 연도)
@@ -26,11 +26,10 @@ $(document).ready(function () {
   // 아직 생일을 맞지 않았다면 1살 빼기 (탄생월 > 오늘인 경우 / 같은 달이라면, 탄생일 > 오늘인 경우)
   const m = tm - bm;
   if (m < 0 || (m === 0 && td < bd)) age--;
-
-  console.log(`1997년 11월 27일에 태어난 나의 만 나이는 오늘 기준(${ty}년 ${tm}월 ${td}일), ${age}세입니다.`);
-
+  
   // #age 찾아서 내부에 age 값 출력 (대상.innerHTML = 값;)
   const Age = document.getElementById('age');
   Age.innerHTML = age;
-
+  
+  console.log(`1997년 11월 27일에 태어난 나의 만 나이는 오늘 기준(${ty}년 ${tm}월 ${td}일), ${age}세입니다.`);
 });
