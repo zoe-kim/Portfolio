@@ -7,23 +7,30 @@ $(document).ready(function () {
   });
   
   // #about
-  // #age -> 만 나이 계산법
+  // #age 만 나이 계산
+  // 오늘 날짜 저장
   const now = new Date();
-  console.log(now);
+  const ty = now.getFullYear();   // 연도 반환
+  const tm = now.getMonth() + 1;  // 월 반환 : 0 ~ 11월
+  const td = now.getDate();       // 일 반환 : 1 ~ 31일
 
-  const yy = now.getFullYear();   // 연도 반환
-  const mm = now.getMonth() + 1;  // 월 반환 : 0 ~ 11월
-  const dd = now.getDate();       // 일 반환 : 1 ~ 31일
-  console.log(yy, mm, dd);
+  // 생일 저장
+  const birth = new Date(1997, 11, 27);
+  const by = birth.getFullYear();
+  const bm = birth.getMonth();
+  const bd = birth.getDate();
 
-  // result 값
-  let result = yy - '1997';
-  console.log(result);
+  // 나이 (올해의 연도 - 탄생 연도)
+  let age = ty - by;
 
-  // #age 찾아서 내부에 result 출력 (대상.innerHTML = 값;)
+  // 아직 생일을 맞지 않았다면 1살 빼기 (탄생월 > 오늘인 경우 / 같은 달이라면, 탄생일 > 오늘인 경우)
+  const m = tm - bm;
+  if (m < 0 || (m === 0 && td < bd)) age--;
+
+  console.log(`1997년 11월 27일에 태어난 나의 만 나이는 오늘 기준(${ty}년 ${tm}월 ${td}일), ${age}세입니다.`);
+
+  // #age 찾아서 내부에 age 값 출력 (대상.innerHTML = 값;)
   const Age = document.getElementById('age');
-
-  if(mm >= 11 && dd >= 27) Age.innerHTML = result;
-  else Age.innerHTML = result - '1';  // 아직 생일을 맞지 않았다면 -1살
+  Age.innerHTML = age;
 
 });
