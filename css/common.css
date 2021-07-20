@@ -1,5 +1,4 @@
-@charset "UTF-8";
-body, h1, h2, h3, h4, p, ul, button {
+body, h1, h2, h3, h4, h5, h6, p, ul, button {
   margin: 0;
   padding: 0; }
 
@@ -50,12 +49,71 @@ header, nav, section, footer {
 .hidden {
   visibility: hidden; }
 
-.shadow {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); }
-
 .wrap {
   position: relative;
   z-index: 1; }
+
+.content {
+  position: relative; }
+
+.content_box {
+  background: #fff;
+  padding: 20px 16px;
+  border-radius: 24px; }
+
+.mr8 {
+  margin-right: 8px; }
+
+.mt16 {
+  margin-top: 16px; }
+
+.mb4 {
+  margin-bottom: 4px; }
+
+.mb8 {
+  margin-bottom: 8px; }
+
+.mb12 {
+  margin-bottom: 12px; }
+
+.mb16 {
+  margin-bottom: 16px; }
+
+.mb20 {
+  margin-bottom: 20px; }
+
+.font14 {
+  font-size: 14px; }
+
+.font16 {
+  font-size: 16px; }
+
+.font24 {
+  font-size: 24px; }
+
+.font32 {
+  font-size: 32px; }
+
+.regular {
+  font-weight: 400; }
+
+.medium {
+  font-weight: 500; }
+
+.bold {
+  font-weight: 700; }
+
+.shadow1 {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); }
+
+.shadow2 {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
+
+.purple {
+  color: #D1A1FF; }
+
+.green {
+  color: #55B36B; }
 
 #skip a {
   position: absolute;
@@ -73,12 +131,12 @@ header, nav, section, footer {
     text-align: center; }
 
 body {
-  font-family: "DM Sans", "맑은 고딕", "Malgun Gothic", sans-serif;
+  font-family: "DM Sans", "Noto Sans KR", sans-serif;
   font-size: 16px;
   color: #1E1E1E;
   line-height: 1;
   font-weight: 400;
-  letter-spacing: -0.035em; }
+  background: #f9f9f9; }
   body * {
     box-sizing: border-box; }
 
@@ -172,7 +230,8 @@ body {
   right: 30px;
   width: 64px;
   height: 160px;
-  display: none; }
+  display: none;
+  z-index: 800; }
   #topBtn .arrow_top {
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -208,5 +267,14 @@ body {
     height: 120px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
+  #topBtn .round {
+    -webkit-animation: round 10s infinite linear;
+    -moz-animation: round 10s infinite linear;
+    animation: round 10s infinite linear;
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    width: 120px;
+    opacity: .8; }
 
 /*# sourceMappingURL=common.css.map */

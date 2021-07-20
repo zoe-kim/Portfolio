@@ -20,9 +20,5 @@ $(document).ready(function () {
     $('html, body').stop().animate({scrollTop: 0}); // html -> ie, body -> 크롬
   });
 
-  // #scrollBtn 버튼을 클릭하면 스크롤바를 813로 만들기
-  $('#scrollBtn').on('click', function () {
-    $('html, body').stop().animate({scrollTop: 813});
-  });
 
 });

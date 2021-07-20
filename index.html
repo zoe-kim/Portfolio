@@ -10,32 +10,34 @@
   <link rel="shortcut icon" href="images/common/favicon.ico">
   <link rel="icon" href="images/common/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=DM+Sans:regular,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:regular,500,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
 
   <script src="js/jquery-1.12.4.min.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/main.js"></script>
 </head>
 
 <body>
-
+  <!-- skip navigation -->
   <div id="skip">
     <a href="#cnt2">본문 바로가기</a>
   </div>
-
-  <header id="pc_header" class="header shadow">
+  <!-- header -->
+  <header id="pc_header" class="header shadow1">
     <div class="wrap">
       <nav class="pc_nav">
         <h1 class="logo">
           <a href="index.html"><span class="blind">엔조잇 로고</span></a>
         </h1>
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Experience</a></li>
-          <li><a href="#">Awards</a></li>
-          <li><a href="#">Report</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#report">Report</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <button class="dark" type="button">
@@ -44,7 +46,7 @@
       </button>
     </div>
   </header>
-  <header id="m_header" class="header shadow">
+  <header id="m_header" class="header shadow1">
     <h1 class="logo">
       <a href="index.html"><span class="blind">엔조잇 로고</span></a>
     </h1>
@@ -57,11 +59,11 @@
       </button>
       <div class="menu_wrap">
         <ul class="menu">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Experience</a></li>
-          <li><a href="#">Awards</a></li>
-          <li><a href="#">Report</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#report">Report</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <button class="menu_close" type="button">
           <img src="images/common/close_btn.png" alt="전체메뉴 닫기">
@@ -69,14 +71,15 @@
       </div>
     </nav>
   </header>
-
+  <!-- top button -->
   <button id="topBtn" type="button">
     <span class="blind">위로 가기</span>
     <div class="arrow_top"></div>
     <div class="arrow_btm"></div>
+    <div class="round"><img src="images/common/topBtn_round.png" alt=""></div>
   </button>
-
-  <section id="cnt1">
+  <!-- main contents -->
+  <section id="main">
     <h2 class="blind">메인 페이지</h2>
     <div class="wrap">
       <h3>
@@ -91,11 +94,96 @@
       </button>
     </div>
   </section>
-
+  <!-- about contents -->
+  <section id="about">
+    <h2 class="blind">자기소개 페이지</h2>
+    <div class="wrap">
+      <div class="title mb20">
+        <h4 class="font32">About</h4>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="content">
+        <div class="content_box shadow2 mb20">
+          <h5 class="mb16 green">Introduce</h5>
+          <p class="font14 mb12">
+            코딩하는 디자이너, Zoe입니다. <br>UX/UI 디자인 및 퍼블리싱 분야의 전문가가 되고자 합니다.
+          </p>
+          <p class="font14 mb4">
+            <i class="xi-maker font16 mr8"></i>
+            <span>대한민국 서울</span>
+          </p>
+          <p class="font14 mb4">
+            <i class="xi-cake font16 mr8"></i>
+            <span>1997. 11. 27 (만 <span id="age"></span>세)</span>
+          </p>
+          <p class="font14 mb4">
+            <i class="xi-mail font16 mr8"></i>
+            <span><a href="mailto:thfud333@gmail.com">thfud333@gmail.com</a></span>
+          </p>
+          <p class="font14 mb4">
+            <i class="xi-github font16 mr8"></i>
+            <span><a href="https://github.com/Zoe-Kim">https://github.com/Zoe-Kim</a></span>
+          </p>
+        </div>
+        <div class="content_box shadow2 mb20">
+          <h5 class="mb16 green">Education</h5>
+          <p class="font14 mb4 medium">
+            서울여자대학교
+          </p>
+          <p class="font14">
+            <i class="xi-book font16 mr8"></i>
+            <span>미래산업융합대학 디지털미디어학과</span>
+          </p>
+          <p class="font14">
+            <i class="xi-school font16 mr8"></i>
+            <span>2016.03 - 2021.08</span>
+          </p>
+          <p class="font14 mb4 mt16 medium">
+            수도여자고등학교
+          </p>
+          <p class="font14">
+            <i class="xi-book font16 mr8"></i>
+            <span>인문계열</span>
+          </p>
+          <p class="font14">
+            <i class="xi-school font16 mr8"></i>
+            <span>2013.03 - 2016.02</span>
+          </p>
+        </div>
+        <div class="content_box shadow2 mb20">
+          <h5 class="mb16 green">Skills</h5>
+          <p class="font14 mb12">
+            코딩하는 디자이너, Zoe입니다. <br>UX/UI 디자인 및 퍼블리싱 분야의 전문가가 되고자 합니다.
+          </p>
+          <p class="font14 mb4">
+            <i class="xi-maker font16 mr8"></i>
+            <span>대한민국 서울</span>
+          </p>
+          <p class="font14 mb4">
+            <i class="xi-cake font16 mr8"></i>
+            <span>1997. 11. 27 (만 <span id="age"></span>세)</span>
+          </p>
+          <p class="font14 mb4">
+            <i class="xi-mail font16 mr8"></i>
+            <span><a href="mailto:thfud333@gmail.com">thfud333@gmail.com</a></span>
+          </p>
+          <p class="font14 mb4">
+            <i class="xi-github font16 mr8"></i>
+            <span><a href="https://github.com/Zoe-Kim">https://github.com/Zoe-Kim</a></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- experience contents -->
+  <!-- awards contents -->
+  <!-- about contents -->
+  <!-- contact contents -->
+  <!-- footer -->
   <footer id="footer">
 
   </footer>
-
 </body>
 
 </html>
