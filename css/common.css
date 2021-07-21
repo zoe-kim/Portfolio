@@ -196,7 +196,7 @@ body {
           font-weight: 500;
           -webkit-transition: all 0.3s;
           transition: all 0.3s; }
-        .header .wrap .pc_nav ul li:hover a {
+        .header .wrap .pc_nav ul li:hover a, .header .wrap .pc_nav ul li a:focus-visible {
           color: #fff;
           -webkit-transition: all 0.3s;
           transition: all 0.3s; }

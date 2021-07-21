@@ -76,7 +76,7 @@ body{
         margin-left: 40px;
         li{
           a{display: block;font-size: 18px;line-height: 32px;padding: 0 14px;font-weight: 500;@include transition(all 0.3s);}
-          &:hover a{color: #fff;@include transition(all 0.3s);}
+          &:hover a, a:focus-visible{color: #fff;@include transition(all 0.3s);}
         }
       }
     }
