@@ -1,0 +1,10 @@
+@charset "utf-8";
+@import "_var", "_mixin";
+
+// pc (1920px)
+#contact{
+  padding-top: 124px;
+  .wrap{
+    margin: 0 240px;
+  }
+}

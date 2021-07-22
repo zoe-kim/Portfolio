@@ -1,0 +1,36 @@
+#experience {
+  padding-top: 124px; }
+  #experience .wrap {
+    margin: 0 240px; }
+
+.experience_history li {
+  position: relative;
+  padding: 0 0 72px 62px; }
+  .experience_history li::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 4px;
+    bottom: -3px;
+    width: 3px;
+    border-radius: 3px;
+    background: #eee; }
+  .experience_history li::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    background: #1E1E1E; }
+  .experience_history li a {
+    display: block;
+    overflow: hidden; }
+    .experience_history li a .thumb_wrap {
+      width: 240px;
+      height: 180px;
+      border-radius: 12px;
+      overflow: hidden; }
+
+/*# sourceMappingURL=experience.css.map */

@@ -18,6 +18,9 @@ $(document).ready(function () {
   // #age 찾아서 내부에 age 값 출력 (대상.innerHTML = 값;)
   const Age = document.getElementById('age');
   Age.innerHTML = age;
+  // #today 찾아서 내부에 오늘 날짜 출력
+  const toDay = document.getElementById('today');
+  toDay.innerHTML = `- ${ty}. ${tm}. ${td} 기준`;
   console.log(`1997년 11월 27일에 태어난 나의 만 나이는 오늘 기준(${ty}년 ${tm}월 ${td}일), ${age}세입니다.`);
 
   // Skills 아코디언
@@ -30,7 +33,7 @@ $(document).ready(function () {
   // 2) 키보드 제어 - 상단방향키(38), 하단방향키(40), home(36), end(35), enter/spacebar(click 이벤트가 대신 함)
   $('.acdnHeader').on('keydown', function (e) {
     const key = e.keyCode;
-    console.log(key);
+    //console.log(key);
     switch (key) {
       case 38:  //상단방향키
         if ($(this).is('.first')) {
@@ -74,7 +77,6 @@ $(document).ready(function () {
       $(this).closest('.accordion').removeClass('focus');
     }
   });
-
   // 아코디언 헤더가 .on을 가질 때, 아이콘 폰트 클래스명 변경
   $('.acdnHeader').on('click', function () {
     if ($(this).is('.on')) $(this).find('.xi-angle-down-min').attr("class","xi-angle-up-min").parents('.tit').siblings('.tit').find('.xi-angle-up-min').attr("class","xi-angle-down-min");

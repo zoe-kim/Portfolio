@@ -25,6 +25,9 @@
           line-height: 24px; }
           #about .wrap .content > div p span {
             display: inline-block; }
+            #about .wrap .content > div p span #today {
+              color: gray;
+              vertical-align: top; }
 
 .accordion .acdnHeader {
   position: relative;

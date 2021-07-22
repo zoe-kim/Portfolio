@@ -21,9 +21,6 @@
     -ms-transform: translateX(-50%) rotate(360deg);
     -webkit-transform: translateX(-50%) rotate(360deg);
     transform: translateX(-50%) rotate(360deg); } }
-body {
-  height: 2000px; }
-
 #main {
   background: #fff; }
   #main .wrap {

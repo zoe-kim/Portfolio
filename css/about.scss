@@ -16,7 +16,10 @@
           @include flex;
           @include align-items;
           line-height: 24px;
-          span{display: inline-block;}
+          span{
+            display: inline-block;
+            #today{color: gray;vertical-align: top;}
+          }
         }
       }
     }
