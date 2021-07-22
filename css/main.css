@@ -25,7 +25,6 @@ body {
   height: 2000px; }
 
 #main {
-  height: 100vh;
   background: #fff; }
   #main .wrap {
     height: 100%; }
@@ -64,33 +63,5 @@ body {
         height: 8px;
         background: #1E1E1E;
         border-radius: 20px; }
-
-#about {
-  padding-top: 124px; }
-  #about .wrap {
-    margin: 0 200px; }
-    #about .wrap .content {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-wrap: wrap;
-      flex-wrap: wrap;
-      -webkit-justify-content: space-between;
-      justify-content: space-between; }
-      #about .wrap .content div {
-        width: calc(100%/3 - 20px); }
-        #about .wrap .content div p {
-          display: -webkit-box;
-          display: -moz-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-          -webkit-align-items: center;
-          align-items: center;
-          line-height: 24px; }
-          #about .wrap .content div p span {
-            display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */

@@ -22,6 +22,7 @@ header, nav, section, footer{display: block;}
 .content_box{background: #fff;padding: 20px 16px;border-radius: 24px;}
 
 .mr8{margin-right: 8px;}
+.mt8{margin-top: 8px;}
 .mt16{margin-top: 16px;}
 .mb4{margin-bottom: 4px;}
 .mb8{margin-bottom: 8px;}
@@ -38,11 +39,13 @@ header, nav, section, footer{display: block;}
 .medium{font-weight: 500;}
 .bold{font-weight: 700;}
 
-.shadow1{box-shadow: 0 8px 16px rgba(0,0,0,.1);}
-.shadow2{box-shadow: 0 2px 4px rgba(0,0,0,.05);}
+.shadow1{box-shadow: 0 8px 16px rgba(0,0,0,0.2);}
+.shadow2{box-shadow: 0 2px 4px rgba(0,0,0,0.15);}
 
 .purple{color: $purple;}
 .green{color: $green;}
+
+.transition{@include transition(all 0.3s);}
 
 // skip navigation
 #skip a{
@@ -52,45 +55,47 @@ header, nav, section, footer{display: block;}
 
 // body
 body{
-  font-family: "DM Sans", "Noto Sans KR", sans-serif;font-size: 16px;color: $black;line-height: 1;font-weight: 400;background: #f9f9f9;
+  font-family: "DM Sans", "Noto Sans KR", sans-serif;font-size: 16px;color: $black;line-height: 1;font-weight: 400;background: #f2f2f2;
   *{box-sizing: border-box;}
 }
 
 // pc (1920px)
-.header{
-  @include translateX-50;
-  @include transition(all 0.3s);
-  position: absolute;bottom: 60px;left: 50%;width: 85%;height: 64px;background: linear-gradient(to right, $purple, $green);border-radius: 24px;z-index: 900;
-  .wrap{
-    @include flex;
-    @include align-items;
-    @include justify-content(space-between);
-    margin: 0 20px;height: 64px;
-    .pc_nav{
+header{
+  position: absolute;width: 100%;padding:0 240px 60px;z-index: 900;transition-property: padding !important;
+  #header_wrap{
+    position: relative;width: 100%;height: 64px;background: linear-gradient(to right, $purple, $green);border-radius: 24px;z-index: 1;
+    .wrap{
       @include flex;
       @include align-items;
-      .logo a{display: block;width: 60px;height: 60px;background: url("../images/common/favicon.ico") no-repeat center / cover;}
-      ul{
+      @include justify-content(space-between);
+      @include transition(all 0.3s);
+       position: relative; margin: 0 20px;height: 64px;
+      .pc_nav{
         @include flex;
         @include align-items;
-        margin-left: 40px;
-        li{
-          a{display: block;font-size: 18px;line-height: 32px;padding: 0 14px;font-weight: 500;@include transition(all 0.3s);}
-          &:hover a, a:focus-visible{color: #fff;@include transition(all 0.3s);}
+        .logo a{display: block;width: 60px;height: 60px;background: url("../images/common/favicon.ico") no-repeat center / cover;}
+        ul{
+          @include flex;
+          @include align-items;
+          margin-left: 40px;
+          li{
+            a{display: block;font-size: 18px;line-height: 32px;padding: 0 14px;font-weight: 500;@include transition(all 0.3s);}
+            &:hover a, a:focus-visible{color: #fff;@include transition(all 0.3s);}
+          }
         }
       }
-    }
-    .dark{
-      font-size: 32px;@include transition(all 0.3s);
-      &:hover, &:focus{color: $yellow;@include transition(all 0.3s);}
+      .dark{
+        font-size: 32px;@include transition(all 0.3s);
+        &:hover, &:focus{color: $yellow;@include transition(all 0.3s);}
+      }
     }
   }
+  .m_nav{visibility: hidden;height: 0;overflow: hidden;}
 }
-.header.active{
-  @include transform(translateX(0%));
-  position: fixed;top: 0;left: 0;width: 100%;border-radius: 0;
+header.fixed{
+  position: fixed; top: 0 !important;padding: 0;
+  #header_wrap{border-radius: 0;}
 }
-#m_header{visibility: hidden;height: 0;overflow: hidden;}
 #topBtn{
   position: fixed;bottom: 30px;right: 30px;width: 64px;height: 160px;display: none;z-index: 800;
   .arrow_top{

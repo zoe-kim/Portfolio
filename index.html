@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/about.css">
 
   <script src="js/jquery-1.12.4.min.js"></script>
   <script src="js/common.js"></script>
@@ -27,33 +28,27 @@
     <a href="#about">본문 바로가기</a>
   </div>
   <!-- header -->
-  <header id="pc_header" class="header shadow1">
-    <div class="wrap">
-      <nav class="pc_nav">
-        <h1 class="logo">
-          <a href="index.html"><span class="blind">엔조잇 로고</span></a>
-        </h1>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#awards">Awards</a></li>
-          <li><a href="#report">Report</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="dark" type="button">
-        <i class="xi-moon"></i>
-        <span class="blind">다크 모드</span>
-      </button>
+  <header class="transition">
+    <div id="header_wrap">
+      <div class="wrap">
+        <nav class="pc_nav">
+          <h1 class="logo">
+            <a href="index.html"><span class="blind">엔조잇 로고</span></a>
+          </h1>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#report">Report</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="dark" type="button">
+          <i class="xi-moon"></i>
+          <span class="blind">다크 모드</span>
+        </button>
+      </div>
     </div>
-  </header>
-  <header id="m_header" class="header shadow1">
-    <h1 class="logo">
-      <a href="index.html"><span class="blind">엔조잇 로고</span></a>
-    </h1>
-    <button class="dark" type="button">
-      <span class="blind">다크 모드</span>
-    </button>
     <nav class="m_nav">
       <button class="menu_open" type="button">
         <span class="blind">전체메뉴 열기</span>
@@ -156,53 +151,54 @@
           <h5 class="mb16 green">Skills</h5>
           <div class="accordion" id="skills">
             <h3 class="tit">
-              <button type="button" aria-controls="acdnPanel1" id="acdnHeader1" class="acdnHeader first">
+              <button type="button" aria-controls="acdnPanel1" id="acdnHeader1" class="acdnHeader first mt8 medium">
                 <span class="blind">Category</span>
                 <span>Programming</span>
+                <i class="xi-angle-down-min"></i>
               </button>
             </h3>
             <div role="region" aria-labelledby="acdnHeader1" id="acdnPanel1" class="acdnPanel">
-              <div>
+              <div class="mt8 font14">
                 <span class="blind">Programming Skills</span>
                 <p>HTML5</p>
                 <p>CSS3</p>
                 <p>Sass</p>
-                <p>JavaScript</p>
                 <p>jQuery</p>
-                <p>Unity</p>
-                <p>C++</p>
-                <p>C#</p>
+                <p>JavaScript</p>
+                <p>Unity(C#)</p>
               </div>
             </div>
             <h3 class="tit">
-              <button type="button" aria-controls="acdnPanel2" id="acdnHeader2" class="acdnHeader">
+              <button type="button" aria-controls="acdnPanel2" id="acdnHeader2" class="acdnHeader mt8 medium">
                 <span class="blind">Category</span>
                 <span>Design</span>
+                <i class="xi-angle-down-min"></i>
               </button>
             </h3>
             <div role="region" aria-labelledby="acdnHeader2" id="acdnPanel2" class="acdnPanel">
-              <div>
+              <div class="mt8 font14">
                 <span class="blind">Design Skills</span>
-                <p>Figma</p>
                 <p>XD</p>
+                <p>Figma</p>
                 <p>Illustrator</p>
                 <p>Photoshop</p>
                 <p>After Effects</p>
                 <p>Premiere Pro</p>
-                <p>InDesign</p>
               </div>
             </div>
             <h3 class="tit">
-              <button type="button" aria-controls="acdnPanel3" id="acdnHeader3" class="acdnHeader last">
+              <button type="button" aria-controls="acdnPanel3" id="acdnHeader3" class="acdnHeader last mt8 medium">
                 <span class="blind">Category</span>
                 <span>Utility</span>
+                <i class="xi-angle-down-min"></i>
               </button>
             </h3>
             <div role="region" aria-labelledby="acdnHeader3" id="acdnPanel3" class="acdnPanel">
-              <div>
+              <div class="mt8 font14">
                 <span class="blind">Utility Skills</span>
-                <p>Zeplin</p>
                 <p>GitHub</p>
+                <p>Zeplin</p>
+                <p>Slack</p>
               </div>
             </div>
           </div>      
