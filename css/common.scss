@@ -6,9 +6,10 @@ body, h1, h2, h3, h4, h5, h6, p, ul, button{margin: 0;padding: 0;}
 h1, h2, h3, h4, h5, h6{font-size: 100%;}
 ul{list-style: none;}
 address{font-style: normal;}
+a:link, button{cursor: url("../images/common/cursor2.png"), auto;}
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
 img{border: none;vertical-align: top;max-width: 100%;}
-button{font-family: inherit;font-size: inherit;color: inherit;border: none;background: none;cursor: pointer;}
+button{font-family: inherit;font-size: inherit;color: inherit;border: none;background: none;}
 header, nav, section, footer{display: block;}
 
 // common class
@@ -62,7 +63,7 @@ header, nav, section, footer{display: block;}
 
 // body
 body{
-  font-family: "DM Sans", "Noto Sans KR", sans-serif;font-size: 16px;color: $black;line-height: 1;font-weight: 400;background: #f9f9f9;
+  font-family: "DM Sans", "Noto Sans KR", sans-serif;font-size: 16px;color: $black;line-height: 1;font-weight: 400;background: #f9f9f9;cursor: url("../images/common/cursor1.png"), auto;
   *{box-sizing: border-box;}
 }
 

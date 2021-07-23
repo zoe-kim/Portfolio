@@ -11,6 +11,9 @@ ul {
 address {
   font-style: normal; }
 
+a:link, button {
+  cursor: url("../images/common/cursor2.png"), auto; }
+
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
   color: inherit; }
@@ -25,8 +28,7 @@ button {
   font-size: inherit;
   color: inherit;
   border: none;
-  background: none;
-  cursor: pointer; }
+  background: none; }
 
 header, nav, section, footer {
   display: block; }
@@ -164,7 +166,8 @@ body {
   color: #1E1E1E;
   line-height: 1;
   font-weight: 400;
-  background: #f9f9f9; }
+  background: #f9f9f9;
+  cursor: url("../images/common/cursor1.png"), auto; }
   body * {
     box-sizing: border-box; }
 
