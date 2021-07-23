@@ -61,14 +61,23 @@ header, nav, section, footer {
   padding: 20px 16px;
   border-radius: 24px; }
 
+.mr3 {
+  margin-right: 3px; }
+
 .mr8 {
   margin-right: 8px; }
 
 .mt8 {
   margin-top: 8px; }
 
+.mt12 {
+  margin-top: 12px; }
+
 .mt16 {
   margin-top: 16px; }
+
+.mt24 {
+  margin-top: 24px; }
 
 .mb4 {
   margin-bottom: 4px; }
@@ -94,8 +103,17 @@ header, nav, section, footer {
 .font16 {
   font-size: 16px; }
 
+.font20 {
+  font-size: 20px; }
+
+.font22 {
+  font-size: 22px; }
+
 .font24 {
   font-size: 24px; }
+
+.font30 {
+  font-size: 30px; }
 
 .font32 {
   font-size: 32px; }
