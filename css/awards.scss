@@ -8,3 +8,12 @@
     margin: 0 240px;
   }
 }
+.swiper-slide{
+  @include flex;
+  > div{
+    width: 100%;
+    .content_box{
+      width: calc(100% - 36px);
+    }
+  }
+}

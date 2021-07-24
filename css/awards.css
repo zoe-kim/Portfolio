@@ -3,4 +3,15 @@
   #awards .wrap {
     margin: 0 240px; }
 
+.swiper-slide {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+  .swiper-slide > div {
+    width: 100%; }
+    .swiper-slide > div .content_box {
+      width: calc(100% - 36px); }
+
 /*# sourceMappingURL=awards.css.map */

@@ -14,7 +14,10 @@
     &::before{
       content: "";position: absolute;top: 22px;left: 4px;bottom: -3px;width: 3px;border-radius: 3px;background: #eee;
     }
-    &:last-child:before{display:none}
+    &:last-child{
+      padding-bottom: 0;
+      &::before{display:none}
+    }
     &::after{
       content: "";position: absolute;top: 6px;left: 0;width: 12px;height: 12px;border-radius: 12px;background: $black;
     }

@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAIA,OAAO;EACL,WAAW,EAAE,KAAK;EAClB,aAAK;IACH,MAAM,EAAE,OAAO",
-"sources": ["awards.scss"],
+"mappings": "AAIA,OAAO;EACL,WAAW,EAAE,KAAK;EAClB,aAAK;IACH,MAAM,EAAE,OAAO;;AAGnB,aAAa;ECTX,OAAO,EAAE,WAAW;EACpB,OAAO,EAAE,QAAQ;EACjB,OAAO,EAAE,WAAW;EACpB,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,IAAI;EDOb,mBAAK;IACH,KAAK,EAAE,IAAI;IACX,gCAAY;MACV,KAAK,EAAE,iBAAiB",
+"sources": ["awards.scss","_mixin.scss"],
 "names": [],
 "file": "awards.css"
 }

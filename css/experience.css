@@ -15,8 +15,10 @@
     width: 3px;
     border-radius: 3px;
     background: #eee; }
-  .experience_history li:last-child:before {
-    display: none; }
+  .experience_history li:last-child {
+    padding-bottom: 0; }
+    .experience_history li:last-child::before {
+      display: none; }
   .experience_history li::after {
     content: "";
     position: absolute;
