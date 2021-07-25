@@ -1,33 +1,29 @@
-#about {
-  padding-top: 124px; }
-  #about .wrap {
-    margin: 0 240px; }
-    #about .wrap .content {
+#about .content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; }
+  #about .content > div {
+    width: calc(100%/3 - 20px); }
+    #about .content > div p {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
-      -webkit-flex-wrap: wrap;
-      flex-wrap: wrap;
-      -webkit-justify-content: space-between;
-      justify-content: space-between; }
-      #about .wrap .content > div {
-        width: calc(100%/3 - 20px); }
-        #about .wrap .content > div p {
-          display: -webkit-box;
-          display: -moz-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-          -webkit-align-items: center;
-          align-items: center;
-          line-height: 24px; }
-          #about .wrap .content > div p span {
-            display: inline-block; }
-            #about .wrap .content > div p span #today {
-              color: gray;
-              vertical-align: top; }
+      -webkit-align-items: center;
+      align-items: center;
+      line-height: 24px; }
+      #about .content > div p span {
+        display: inline-block; }
+        #about .content > div p span #today {
+          color: gray;
+          vertical-align: top; }
 
 .accordion .acdnHeader {
   position: relative;

@@ -1,17 +1,76 @@
-#awards {
-  padding-top: 124px; }
-  #awards .wrap {
-    margin: 0 240px; }
-
-.swiper-slide {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; }
-  .swiper-slide > div {
-    width: 100%; }
-    .swiper-slide > div .content_box {
-      width: calc(100% - 36px); }
+.swiper-container {
+  position: relative;
+  padding-bottom: 66px; }
+  .swiper-container .swiper-wrapper .swiper-slide {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between; }
+    .swiper-container .swiper-wrapper .swiper-slide > div {
+      width: calc(100%/3 - 20px); }
+      .swiper-container .swiper-wrapper .swiper-slide > div .content_box {
+        padding: 0;
+        overflow: hidden; }
+        .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap {
+          display: block;
+          padding: 20px 16px;
+          background: url("../images/awards/txt_wrap_bg.png") no-repeat left/contain; }
+          .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap strong {
+            line-height: 1.6; }
+          .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap .date {
+            display: block;
+            text-align: right; }
+        .swiper-container .swiper-wrapper .swiper-slide > div .content_box .thumb_wrap {
+          position: relative;
+          height: 240px;
+          overflow: hidden; }
+          .swiper-container .swiper-wrapper .swiper-slide > div .content_box .thumb_wrap img {
+            position: absolute;
+            width: 100%;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s; }
+          .swiper-container .swiper-wrapper .swiper-slide > div .content_box .thumb_wrap:hover img, .swiper-container .swiper-wrapper .swiper-slide > div .content_box .thumb_wrapfocus img {
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            transform: scale(1.1);
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s; }
+          .swiper-container .swiper-wrapper .swiper-slide > div .content_box .thumb_wrap .btm {
+            bottom: 0; }
+      .swiper-container .swiper-wrapper .swiper-slide > div.last {
+        visibility: hidden;
+        height: 0;
+        overflow: hidden; }
+  .swiper-container .controller {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    z-index: 100; }
+    .swiper-container .controller .swiper-button-prev, .swiper-container .controller .swiper-button-next {
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      position: static;
+      margin-top: 0;
+      width: 42px;
+      height: 42px;
+      background: no-repeat 50% / cover;
+      margin-right: 12px; }
+      .swiper-container .controller .swiper-button-prev::after, .swiper-container .controller .swiper-button-next::after {
+        display: none; }
+    .swiper-container .controller .swiper-button-prev {
+      background-image: url("../images/awards/prev_btn.png"); }
+      .swiper-container .controller .swiper-button-prev:hover, .swiper-container .controller .swiper-button-prev:focus {
+        background-image: url("../images/awards/prev_btn_hover.png"); }
+    .swiper-container .controller .swiper-button-next {
+      background-image: url("../images/awards/next_btn.png"); }
+      .swiper-container .controller .swiper-button-next:hover, .swiper-container .controller .swiper-button-next:focus {
+        background-image: url("../images/awards/next_btn_hover.png"); }
 
 /*# sourceMappingURL=awards.css.map */

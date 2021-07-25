@@ -3,23 +3,19 @@
 
 // pc (1920px)
 #about{
-  padding-top: 124px;
-  .wrap{
-    margin: 0 240px;
-    .content{
-      @include flex;
-      @include flex-wrap;
-      @include justify-content(space-between);
-      > div{
-        width: calc(100%/3 - 20px);
-        p{
-          @include flex;
-          @include align-items;
-          line-height: 24px;
-          span{
-            display: inline-block;
-            #today{color: gray;vertical-align: top;}
-          }
+  .content{
+    @include flex;
+    @include flex-wrap;
+    @include justify-content(space-between);
+    > div{
+      width: calc(100%/3 - 20px);
+      p{
+        @include flex;
+        @include align-items;
+        line-height: 24px;
+        span{
+          display: inline-block;
+          #today{color: gray;vertical-align: top;}
         }
       }
     }

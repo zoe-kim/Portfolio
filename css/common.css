@@ -317,6 +317,11 @@ header.fixed {
     left: 50%;
     width: 120px; }
 
+section:not(#main) {
+  padding-top: 124px; }
+  section:not(#main) .wrap {
+    margin: 0 240px; }
+
 footer {
   position: relative;
   z-index: 0;
