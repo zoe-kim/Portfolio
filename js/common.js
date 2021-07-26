@@ -14,11 +14,16 @@ $(document).ready(function () {
   $(window).on('scroll', function () {
     var $scrollTop = $(this).scrollTop();
     var $header = $("header");
+    //console.log($scrollTop, $('.flow').offset().top);
 
     // #topBtn 등장
     if ($scrollTop > 0) $('#topBtn').fadeIn();
     else $('#topBtn').fadeOut();
-    
+
+    // #topBtn이 .flow 만나면 밀리도록
+   /*  if ($scrollTop === $(document).height() - $(window).height()) $('#topBtn').stop().animate({bottom: 60}, 300);
+    else $('#topBtn').stop().animate({bottom: 30}, 300); */
+
     // 헤더 상단 고정 & 풀기
     if(scrollY < $(window).height()){
       $header.removeClass("fixed");

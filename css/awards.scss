@@ -6,20 +6,17 @@
   position: relative;padding-bottom: 66px;
   .swiper-wrapper{
     .swiper-slide{
-      @include flex;
-      @include justify-content(space-between);
       > div{
-        width: calc(100%/3 - 20px);
         .content_box{
-          padding: 0;overflow: hidden;
+          padding: 0;overflow: hidden;margin: 0 4px;
           .txt_wrap{
             display: block;padding: 20px 16px;background: url("../images/awards/txt_wrap_bg.png") no-repeat left / contain;
             strong{line-height: 1.6;}
             .date{display: block;text-align: right;}
           }
           .thumb_wrap{
-            position: relative;height: 260px;overflow: hidden;
-            img{position: absolute;width: 100%;@include transition(all 0.3s);}
+            position: relative;height: 258px;overflow: hidden;
+            img{position: absolute;height: 100%;@include transition(all 0.3s);}
             &:hover img, &focus img{
               @include transform(scale(1.1));
               @include transition(all 0.3s);
@@ -27,7 +24,6 @@
           }
 
         }
-        &.last{visibility: hidden;height: 0;overflow: hidden;}
       }
     }
   }
@@ -36,11 +32,11 @@
     position: absolute;bottom: 0; z-index: 100;
     .swiper-button-prev, .swiper-button-next{
       @include transition(all 0.3s);
-      position: static;margin-top: 0;width: 42px;height: 42px;background: no-repeat 50% / cover;margin-right: 12px;
+      position: static;margin-top: 0;width: 42px;height: 42px;background: no-repeat 50% / cover;margin-right: 12px;border-radius: 42px;
       &::after{display: none;} // 기본 파란색 버튼 없애기
     }
     .swiper-button-prev{
-      background-image: url("../images/awards/prev_btn.png");
+      background-image: url("../images/awards/prev_btn.png");margin-left: 4px;margin-bottom: 4px;  // 그림자 잘림 해결
       &:hover, &:focus{background-image: url("../images/awards/prev_btn_hover.png");}
     }
     .swiper-button-next{
