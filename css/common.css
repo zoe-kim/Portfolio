@@ -157,6 +157,18 @@ header, nav, section, footer {
 .roboto {
   font-family: "Roboto",sans-serif; }
 
+/* motion keyframes */
+@keyframes horizontalscroll {
+  0% {
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  99%, 100% {
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -webkit-transform: translateX(-100vw);
+    transform: translateX(-100vw); } }
 #skip a {
   position: absolute;
   top: 0;
@@ -336,5 +348,25 @@ footer {
         width: 120px; }
       footer .wrap div p {
         line-height: 1.4; }
+  footer .flow {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%; }
+    footer .flow ul {
+      -webkit-animation: horizontalscroll 30s linear infinite;
+      -moz-animation: horizontalscroll 30s linear infinite;
+      animation: horizontalscroll 30s linear infinite;
+      background: #fff;
+      color: #1E1E1E;
+      border-top: 1px solid #1E1E1E;
+      border-bottom: 1px solid #1E1E1E;
+      width: 4368px; }
+      footer .flow ul li {
+        margin-right: 72px;
+        font-size: 18px;
+        line-height: 2;
+        display: inline-block;
+        font-weight: 500; }
 
 /*# sourceMappingURL=common.css.map */
