@@ -18,13 +18,12 @@
             .date{display: block;text-align: right;}
           }
           .thumb_wrap{
-            position: relative;height: 240px;overflow: hidden;
+            position: relative;height: 260px;overflow: hidden;
             img{position: absolute;width: 100%;@include transition(all 0.3s);}
             &:hover img, &focus img{
               @include transform(scale(1.1));
               @include transition(all 0.3s);
             }
-            .btm{bottom: 0;}
           }
 
         }
