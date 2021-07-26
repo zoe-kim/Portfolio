@@ -17,12 +17,11 @@
           .thumb_wrap{
             position: relative;height: 258px;overflow: hidden;
             img{position: absolute;height: 100%;@include transition(all 0.3s);}
-            &:hover img, &focus img{
+            &:hover img, &:focus img{
               @include transform(scale(1.1));
               @include transition(all 0.3s);
             }
           }
-
         }
       }
     }

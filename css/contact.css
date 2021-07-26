@@ -1,4 +1,81 @@
-#contact .contact_btn {
-  font-size: 42px; }
+#contact .contact_wrap {
+  text-align: center;
+  margin-bottom: 120px; }
+  #contact .contact_wrap .contact_btn {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+    display: inline-block;
+    font-size: 42px;
+    font-weight: 700;
+    max-width: calc(100% - 20px);
+    margin-right: auto; }
+    #contact .contact_wrap .contact_btn::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: #f9f9f9; }
+    #contact .contact_wrap .contact_btn span {
+      position: relative;
+      display: inline-block;
+      z-index: 2;
+      border: 3px solid #D1A1FF;
+      padding: 16px 24px; }
+    #contact .contact_wrap .contact_btn::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      border: 3px solid #1E1E1E;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s; }
+    #contact .contact_wrap .contact_btn:hover {
+      color: #D1A1FF;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+      #contact .contact_wrap .contact_btn:hover::after {
+        border-color: #D1A1FF;
+        background: rgba(209, 161, 255, 0.5);
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s; }
+  #contact .contact_wrap strong {
+    display: block;
+    margin-top: 60px;
+    opacity: 0; }
+#contact .contact_bg {
+  text-align: center; }
+  #contact .contact_bg img {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    position: absolute;
+    bottom: -100px;
+    opacity: 0; }
+    #contact .contact_bg img:nth-child(1) {
+      left: 350px;
+      bottom: -50px; }
+    #contact .contact_bg img:nth-child(2) {
+      left: 250px; }
+    #contact .contact_bg img:nth-child(3) {
+      left: 150px;
+      bottom: -50px; }
+    #contact .contact_bg img:nth-child(4) {
+      left: 50px; }
+    #contact .contact_bg img:nth-child(5) {
+      right: 350px;
+      bottom: -50px; }
+    #contact .contact_bg img:nth-child(6) {
+      right: 250px; }
+    #contact .contact_bg img:nth-child(7) {
+      right: 150px;
+      bottom: -50px; }
+    #contact .contact_bg img:nth-child(8) {
+      right: 50px; }
 
 /*# sourceMappingURL=contact.css.map */
