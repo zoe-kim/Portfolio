@@ -261,7 +261,7 @@ header {
         font-size: 32px;
         -webkit-transition: all 0.3s;
         transition: all 0.3s; }
-        header #header_wrap .wrap .dark:hover, header #header_wrap .wrap .dark:focus {
+        header #header_wrap .wrap .dark:hover, header #header_wrap .wrap .dark:focus-visible {
           color: #ffc72c;
           -webkit-transition: all 0.3s;
           transition: all 0.3s; }

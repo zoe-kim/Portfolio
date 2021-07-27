@@ -119,7 +119,7 @@ header{
       }
       .dark{
         font-size: 32px;@include transition(all 0.3s);
-        &:hover, &:focus{color: $yellow;@include transition(all 0.3s);}
+        &:hover, &:focus-visible{color: $yellow;@include transition(all 0.3s);}
       }
     }
   }
