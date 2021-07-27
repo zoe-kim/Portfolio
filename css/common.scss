@@ -9,6 +9,7 @@ address{font-style: normal;}
 a:link, button{cursor: url("../images/common/cursor2.png"), auto;}
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
 img{border: none;vertical-align: top;max-width: 100%;}
+video{vertical-align: top;max-width: 100%;}
 button{font-family: inherit;font-size: inherit;color: inherit;border: none;background: none;}
 header, nav, section, footer{display: block;}
 
@@ -77,6 +78,20 @@ header, nav, section, footer{display: block;}
       -ms-transform: translateX(-100vw);
       -webkit-transform: translateX(-100vw);
       transform: translateX(-100vw);
+  }
+}
+@keyframes round {
+  0% {
+      -moz-transform: translateX(-50%) rotate(0);
+      -ms-transform: translateX(-50%) rotate(0);
+      -webkit-transform: translateX(-50%) rotate(0);
+      transform: translateX(-50%) rotate(0);
+  }
+  100% {
+      -moz-transform: translateX(-50%) rotate(360deg);
+      -ms-transform: translateX(-50%) rotate(360deg);
+      -webkit-transform: translateX(-50%) rotate(360deg);
+      transform: translateX(-50%) rotate(360deg);
   }
 }
 
@@ -151,12 +166,10 @@ header.fixed{
     position: absolute;bottom: -18%;left: 50%;width: 120px;
   }
 }
-section{
-  &:not(#main){
-    padding-top: 124px;
-    .wrap{
-      margin: 0 240px;
-    }
+.section{
+  padding-top: 124px;
+  .wrap{
+    margin: 0 240px;
   }
 }
 footer{

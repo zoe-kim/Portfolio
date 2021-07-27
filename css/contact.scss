@@ -9,29 +9,42 @@
       @include transition(all 0.5s);
       position: relative;display: inline-block;font-size: 42px;font-weight: 700;max-width: calc(100% - 20px);margin-right: auto;
       &::before{content: "";position: absolute;top: 10px;left: 10px;width: 100%;height: 100%;z-index: 1;background: $bg;}
-      span{position: relative;display: inline-block;z-index: 2;border: 3px solid $purple;padding: 16px 24px;}
+      span{
+        @include transition(all 0.1s);
+        position: relative;top: 0;left: 0;display: inline-block;z-index: 2;border: 3px solid $purple;padding: 16px 24px;
+      }
       &::after{content: "";position: absolute;top: 16px;left: 16px;width: 100%;height: 100%;z-index: 0;border: 3px solid $black;@include transition(all 0.5s);}
       &:hover{
         color: $purple;@include transition(all 0.3s);
         &::after{border-color: $purple;background: rgba(209, 161, 255, .5);@include transition(all 0.3s);}
       }
     }
-    strong{display: block;margin-top: 60px;opacity: 0;}
+    strong{@include transition(all 0.5s);display: block;margin-top: 60px;opacity: 0;}
   }
   .contact_bg{
     text-align: center;
     img{
       @include transition(all 0.5s);
       position: absolute;bottom: -100px;opacity: 0;
-      &:nth-child(1){left: 350px;bottom: -50px;}
+      &:nth-child(odd){bottom: -50px;}
+      &:nth-child(1){left: 350px;}
       &:nth-child(2){left: 250px;}
-      &:nth-child(3){left: 150px;bottom: -50px;}
+      &:nth-child(3){left: 150px;}
       &:nth-child(4){left: 50px;}
 
-      &:nth-child(5){right: 350px;bottom: -50px;}
+      &:nth-child(5){right: 350px;}
       &:nth-child(6){right: 250px;}
-      &:nth-child(7){right: 150px;bottom: -50px;}
+      &:nth-child(7){right: 150px;}
       &:nth-child(8){right: 50px;}
     }
+  }
+  // 버튼에 진입하면 .contact_wrap.on이 추가됨
+  .contact_wrap.on{
+    .contact_btn span{top: 10px;left: 10px;}
+    + .contact_bg img{
+      bottom: 30px;opacity: 1;
+      &:nth-child(odd){bottom: 80px;}
+    }
+    strong{@include transition(all 0.5s);opacity: 1;}
   }
 }

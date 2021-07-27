@@ -1,6 +1,22 @@
 @charset "utf-8";
 @import "_var", "_mixin";
 
+/* motion keyframes */
+@keyframes scroll {
+  0%, 100% {
+    -moz-transform:translateX(-50%) translateY(0);
+    -ms-transform:translateX(-50%) translateY(0);
+    -webkit-transform:translateX(-50%) translateY(0);
+    transform:translateX(-50%) translateY(0);
+  }
+  40%, 80% {
+    -moz-transform:translateX(-50%) translateY(10px);
+    -ms-transform:translateX(-50%) translateY(10px);
+    -webkit-transform:translateX(-50%) translateY(10px);
+    transform:translateX(-50%) translateY(10px);
+  }
+}
+
 // pc (1920px)
 .experience_history{
   li{
@@ -37,5 +53,48 @@
         }
       }
     }
+  }
+}
+.minumsa{
+  .cover{
+    .copy{
+      position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;color: #fff;
+      .cover_keyword{width: 330px;height: 65px;margin: 0 auto;margin-top: 10%;text-align: center;font-size: 30px;line-height: 1.2;font-weight: 500;}
+      .cover_logo{@include translate-50;position: absolute;left: 50%;top: 50%;}
+      .cover_mem{@include translateX-50;position: absolute;left: 50%;bottom: 7%;}
+    }
+    .mv_wrap{
+      position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 0;
+      video{position: absolute;top: 0;left: 0;object-fit: cover;}
+    }
+  }
+  .overview{
+    .top{position: relative;height: 500px;background: $black;}
+    .mid{
+      position: relative;margin-top: -700px;padding-bottom: 120px;
+      .video{
+        position: relative;width: 960px;height: 720px;z-index: 10;display: block;margin: 0 auto;margin-top: 200px;padding-top: 55px;
+        .mv_wrap{
+          position: relative;overflow: hidden;z-index: 10;background: $black;border: 3px solid $black;border-radius: 25px;
+          video{object-fit: cover;}
+        }
+      }
+      .copy{
+        position: relative;margin-top: -72px;text-align: center;
+        strong{display: block;margin-top: 60px;font-size: 24px;}
+        p{margin-top: 40px;line-height: 200%;font-size: 14px;letter-spacing: -0.02rem;}
+      }
+    }
+  }
+  .strategy{
+    padding: 280px 0 337px;background: #000 url(../images/experience/01miumsa/bg_strategy.jpg) 50% 0 no-repeat;
+  }
+}
+#scrollBtn{
+  @include translateX-50;
+  position: absolute;bottom: 240px;left: 50%;width: 32px;height: 48px;border: 3px solid #fff;border-radius: 20px;
+  &::after{
+    @include animation(scroll 2s infinite);
+    content: "";position: absolute;top: 8px;left: 50%;width: 8px;height: 8px;background: #fff;border-radius: 20px;
   }
 }

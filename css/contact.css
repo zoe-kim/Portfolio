@@ -20,7 +20,11 @@
       z-index: 1;
       background: #f9f9f9; }
     #contact .contact_wrap .contact_btn span {
+      -webkit-transition: all 0.1s;
+      transition: all 0.1s;
       position: relative;
+      top: 0;
+      left: 0;
       display: inline-block;
       z-index: 2;
       border: 3px solid #D1A1FF;
@@ -46,6 +50,8 @@
         -webkit-transition: all 0.3s;
         transition: all 0.3s; }
   #contact .contact_wrap strong {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
     display: block;
     margin-top: 60px;
     opacity: 0; }
@@ -57,25 +63,35 @@
     position: absolute;
     bottom: -100px;
     opacity: 0; }
-    #contact .contact_bg img:nth-child(1) {
-      left: 350px;
+    #contact .contact_bg img:nth-child(odd) {
       bottom: -50px; }
+    #contact .contact_bg img:nth-child(1) {
+      left: 350px; }
     #contact .contact_bg img:nth-child(2) {
       left: 250px; }
     #contact .contact_bg img:nth-child(3) {
-      left: 150px;
-      bottom: -50px; }
+      left: 150px; }
     #contact .contact_bg img:nth-child(4) {
       left: 50px; }
     #contact .contact_bg img:nth-child(5) {
-      right: 350px;
-      bottom: -50px; }
+      right: 350px; }
     #contact .contact_bg img:nth-child(6) {
       right: 250px; }
     #contact .contact_bg img:nth-child(7) {
-      right: 150px;
-      bottom: -50px; }
+      right: 150px; }
     #contact .contact_bg img:nth-child(8) {
       right: 50px; }
+#contact .contact_wrap.on .contact_btn span {
+  top: 10px;
+  left: 10px; }
+#contact .contact_wrap.on + .contact_bg img {
+  bottom: 30px;
+  opacity: 1; }
+  #contact .contact_wrap.on + .contact_bg img:nth-child(odd) {
+    bottom: 80px; }
+#contact .contact_wrap.on strong {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 1; }
 
 /*# sourceMappingURL=contact.css.map */

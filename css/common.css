@@ -23,6 +23,10 @@ img {
   vertical-align: top;
   max-width: 100%; }
 
+video {
+  vertical-align: top;
+  max-width: 100%; }
+
 button {
   font-family: inherit;
   font-size: inherit;
@@ -169,6 +173,17 @@ header, nav, section, footer {
     -ms-transform: translateX(-100vw);
     -webkit-transform: translateX(-100vw);
     transform: translateX(-100vw); } }
+@keyframes round {
+  0% {
+    -moz-transform: translateX(-50%) rotate(0);
+    -ms-transform: translateX(-50%) rotate(0);
+    -webkit-transform: translateX(-50%) rotate(0);
+    transform: translateX(-50%) rotate(0); }
+  100% {
+    -moz-transform: translateX(-50%) rotate(360deg);
+    -ms-transform: translateX(-50%) rotate(360deg);
+    -webkit-transform: translateX(-50%) rotate(360deg);
+    transform: translateX(-50%) rotate(360deg); } }
 #skip a {
   position: absolute;
   top: 0;
@@ -329,9 +344,9 @@ header.fixed {
     left: 50%;
     width: 120px; }
 
-section:not(#main) {
+.section {
   padding-top: 124px; }
-  section:not(#main) .wrap {
+  .section .wrap {
     margin: 0 240px; }
 
 footer {

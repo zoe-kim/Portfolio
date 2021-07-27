@@ -1,3 +1,15 @@
+/* motion keyframes */
+@keyframes scroll {
+  0%, 100% {
+    -moz-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0); }
+  40%, 80% {
+    -moz-transform: translateX(-50%) translateY(10px);
+    -ms-transform: translateX(-50%) translateY(10px);
+    -webkit-transform: translateX(-50%) translateY(10px);
+    transform: translateX(-50%) translateY(10px); } }
 .experience_history li {
   position: relative;
   padding: 0 0 72px 62px; }
@@ -71,5 +83,115 @@
             display: inline-block;
             line-height: 30px;
             color: #888; }
+
+.minumsa .cover .copy {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  color: #fff; }
+  .minumsa .cover .copy .cover_keyword {
+    width: 330px;
+    height: 65px;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 500; }
+  .minumsa .cover .copy .cover_logo {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%; }
+  .minumsa .cover .copy .cover_mem {
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    bottom: 7%; }
+.minumsa .cover .mv_wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
+  .minumsa .cover .mv_wrap video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover; }
+.minumsa .overview .top {
+  position: relative;
+  height: 500px;
+  background: #1E1E1E; }
+.minumsa .overview .mid {
+  position: relative;
+  margin-top: -700px;
+  padding-bottom: 120px; }
+  .minumsa .overview .mid .video {
+    position: relative;
+    width: 960px;
+    height: 720px;
+    z-index: 10;
+    display: block;
+    margin: 0 auto;
+    margin-top: 200px;
+    padding-top: 55px; }
+    .minumsa .overview .mid .video .mv_wrap {
+      position: relative;
+      overflow: hidden;
+      z-index: 10;
+      background: #1E1E1E;
+      border: 3px solid #1E1E1E;
+      border-radius: 25px; }
+      .minumsa .overview .mid .video .mv_wrap video {
+        object-fit: cover; }
+  .minumsa .overview .mid .copy {
+    position: relative;
+    margin-top: -72px;
+    text-align: center; }
+    .minumsa .overview .mid .copy strong {
+      display: block;
+      margin-top: 60px;
+      font-size: 24px; }
+    .minumsa .overview .mid .copy p {
+      margin-top: 40px;
+      line-height: 200%;
+      font-size: 14px;
+      letter-spacing: -0.02rem; }
+.minumsa .strategy {
+  padding: 280px 0 337px;
+  background: #000 url(../images/experience/01miumsa/bg_strategy.jpg) 50% 0 no-repeat; }
+
+#scrollBtn {
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 240px;
+  left: 50%;
+  width: 32px;
+  height: 48px;
+  border: 3px solid #fff;
+  border-radius: 20px; }
+  #scrollBtn::after {
+    -webkit-animation: scroll 2s infinite;
+    -moz-animation: scroll 2s infinite;
+    animation: scroll 2s infinite;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 20px; }
 
 /*# sourceMappingURL=experience.css.map */

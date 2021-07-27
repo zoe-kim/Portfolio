@@ -10,17 +10,6 @@
     -ms-transform: translateX(-50%) translateY(10px);
     -webkit-transform: translateX(-50%) translateY(10px);
     transform: translateX(-50%) translateY(10px); } }
-@keyframes round {
-  0% {
-    -moz-transform: translateX(-50%) rotate(0);
-    -ms-transform: translateX(-50%) rotate(0);
-    -webkit-transform: translateX(-50%) rotate(0);
-    transform: translateX(-50%) rotate(0); }
-  100% {
-    -moz-transform: translateX(-50%) rotate(360deg);
-    -ms-transform: translateX(-50%) rotate(360deg);
-    -webkit-transform: translateX(-50%) rotate(360deg);
-    transform: translateX(-50%) rotate(360deg); } }
 #main {
   background: #fff; }
   #main .wrap {

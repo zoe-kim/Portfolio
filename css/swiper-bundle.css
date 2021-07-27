@@ -152,7 +152,7 @@
   height: var(--swiper-navigation-size);
   margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
   z-index: 10;
-  cursor: pointer;
+  cursor: url("../images/common/cursor2.png"), auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,7 +161,7 @@
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
   opacity: 0.35;
-  cursor: auto;
+  cursor: url("../images/common/cursor2.png"), auto;
   pointer-events: none;
 }
 .swiper-button-prev:after,
