@@ -10,6 +10,19 @@
     -ms-transform: translateX(-50%) translateY(10px);
     -webkit-transform: translateX(-50%) translateY(10px);
     transform: translateX(-50%) translateY(10px); } }
+/* common class */
+.movetop {
+  opacity: 0;
+  transform: translateY(40px);
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s; }
+
+.movetop.on {
+  -webkit-transition: all 1.2s ease-out 0.3s;
+  transition: all 1.2s ease-out 0.3s;
+  opacity: 1;
+  transform: translateY(0); }
+
 .experience_history li {
   position: relative;
   padding: 0 0 72px 62px; }
@@ -138,7 +151,7 @@
 .minumsa .overview .top {
   position: relative;
   height: 500px;
-  background: #1E1E1E; }
+  background: #000; }
 .minumsa .overview .mid {
   position: relative;
   margin-top: -700px;
@@ -205,6 +218,154 @@
         letter-spacing: -0.02rem; }
       .minumsa .strategy .inner .group dl + dl {
         margin-top: 130px; }
+.minumsa .style {
+  padding: 220px 0;
+  background: #E2E2E2; }
+  .minumsa .style .typography .inner {
+    text-align: center; }
+    .minumsa .style .typography .inner dl::before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      margin: 0 auto 15px;
+      background: #1E1E1E;
+      border-radius: 50%; }
+    .minumsa .style .typography .inner dl dt {
+      font-weight: 700;
+      margin-bottom: 60px; }
+    .minumsa .style .typography .inner dl dd ul {
+      font-size: 60px; }
+      .minumsa .style .typography .inner dl dd ul li {
+        margin-bottom: 20px;
+        font-family: "Noto Sans KR";
+        font-weight: 700; }
+      .minumsa .style .typography .inner dl dd ul li + li {
+        color: #888;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: "DM Sans"; }
+  .minumsa .style .colors {
+    text-align: center;
+    margin-top: 200px; }
+    .minumsa .style .colors dl::before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      margin: 0 auto 15px;
+      background: #1E1E1E;
+      border-radius: 50%; }
+    .minumsa .style .colors dl dt {
+      font-weight: 700;
+      margin-bottom: 60px; }
+    .minumsa .style .colors dl dd ul {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center; }
+      .minumsa .style .colors dl dd ul li span {
+        display: block;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        padding-top: 36%;
+        margin: 0 20px; }
+      .minumsa .style .colors dl dd ul li:nth-child(1) span {
+        background-color: #189066;
+        color: #fff; }
+      .minumsa .style .colors dl dd ul li:nth-child(2) span {
+        background-color: #1E1E1E;
+        color: #fff; }
+      .minumsa .style .colors dl dd ul li:nth-child(3) span {
+        background-color: #AAA;
+        color: #1E1E1E; }
+      .minumsa .style .colors dl dd ul li:nth-child(4) span {
+        background-color: #F9F9F9;
+        color: #1E1E1E; }
+.minumsa .design_main .bottom {
+  position: relative;
+  padding: 60px 0 129px;
+  background: #fff;
+  color: #000;
+  text-align: center; }
+  .minumsa .design_main .bottom dl::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    margin: 0 auto 15px;
+    background: #000;
+    border-radius: 50%; }
+  .minumsa .design_main .bottom dl dt {
+    font-weight: 700;
+    margin-bottom: 60px; }
+  .minumsa .design_main .bottom dl dd {
+    font-size: 14px;
+    line-height: 172%;
+    letter-spacing: -0.02rem;
+    margin-bottom: 100px; }
+  .minumsa .design_main .bottom .other {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center; }
+  .minumsa .design_main .bottom .video {
+    position: relative;
+    width: 960px;
+    z-index: 10;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 100px; }
+    .minumsa .design_main .bottom .video .mv_wrap {
+      position: relative;
+      overflow: hidden;
+      z-index: 10;
+      background: #1E1E1E;
+      border: 3px solid #1E1E1E;
+      border-radius: 25px; }
+      .minumsa .design_main .bottom .video .mv_wrap video {
+        object-fit: cover; }
+  .minumsa .design_main .bottom .tablet {
+    width: 384px;
+    margin: 0;
+    display: inline-block;
+    margin-right: 100px; }
+  .minumsa .design_main .bottom .mobile {
+    width: 207px;
+    margin: 0;
+    display: inline-block; }
+  .minumsa .design_main .bottom .link_btn {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    height: 54px;
+    line-height: 54px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 0 30px;
+    background: #1E1E1E;
+    color: #fff;
+    margin-top: 90px; }
+    .minumsa .design_main .bottom .link_btn:hover, .minumsa .design_main .bottom .link_btn:focus {
+      background: #55B36B; }
+  .minumsa .design_main .bottom .first {
+    margin-right: 20px; }
+  .minumsa .design_main .bottom .last:hover, .minumsa .design_main .bottom .last:focus {
+    background: #5380a3; }
 
 #scrollBtn {
   -webkit-transform: translateX(-50%);
