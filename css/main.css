@@ -1,53 +1,67 @@
 /* motion keyframes */
+@-webkit-keyframes scroll {
+  0%, 100% {
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+  }
+  40%, 80% {
+    -webkit-transform: translateX(-50%) translateY(10px);
+    transform: translateX(-50%) translateY(10px);
+  }
+}
 @keyframes scroll {
   0%, 100% {
-    -moz-transform: translateX(-50%) translateY(0);
-    -ms-transform: translateX(-50%) translateY(0);
     -webkit-transform: translateX(-50%) translateY(0);
-    transform: translateX(-50%) translateY(0); }
+    transform: translateX(-50%) translateY(0);
+  }
   40%, 80% {
-    -moz-transform: translateX(-50%) translateY(10px);
-    -ms-transform: translateX(-50%) translateY(10px);
     -webkit-transform: translateX(-50%) translateY(10px);
-    transform: translateX(-50%) translateY(10px); } }
-#main {
-  background: #fff; }
-  #main .wrap {
-    height: 100%; }
-    #main .wrap h3 {
-      -webkit-transform: translateY(-100%);
-      -moz-transform: translateY(-100%);
-      transform: translateY(-100%);
-      position: absolute;
-      top: 50%;
-      left: 0;
-      font-size: 26px;
-      text-align: center;
-      width: 100%;
-      font-weight: 400;
-      line-height: 1.7; }
-    #main .wrap #scrollBtn {
-      -webkit-transform: translateX(-50%);
-      -moz-transform: translateX(-50%);
-      transform: translateX(-50%);
-      position: absolute;
-      bottom: 240px;
-      left: 50%;
-      width: 32px;
-      height: 48px;
-      border: 3px solid #1E1E1E;
-      border-radius: 20px; }
-      #main .wrap #scrollBtn::after {
-        -webkit-animation: scroll 2s infinite;
-        -moz-animation: scroll 2s infinite;
-        animation: scroll 2s infinite;
-        content: "";
-        position: absolute;
-        top: 8px;
-        left: 50%;
-        width: 8px;
-        height: 8px;
-        background: #1E1E1E;
-        border-radius: 20px; }
+    transform: translateX(-50%) translateY(10px);
+  }
+}
 
-/*# sourceMappingURL=main.css.map */
+#main {
+  background: #fff;
+}
+
+#main .wrap {
+  height: 100%;
+}
+
+#main .wrap h3 {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 26px;
+  text-align: center;
+  width: 100%;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+#main .wrap #scrollBtn {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 240px;
+  left: 50%;
+  width: 32px;
+  height: 48px;
+  border: 3px solid #1E1E1E;
+  border-radius: 20px;
+}
+
+#main .wrap #scrollBtn::after {
+  -webkit-animation: scroll 2s infinite;
+  animation: scroll 2s infinite;
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: #1E1E1E;
+  border-radius: 20px;
+}

@@ -175,7 +175,6 @@ header.fixed{
 footer{
   position: relative;z-index: 0;background: $purple;
   .wrap{
-    margin: 0 200px;
     div{
       text-align: center;
       a{display: inline-block;vertical-align: bottom;width: 120px;}
@@ -188,6 +187,30 @@ footer{
       @include animation(horizontalscroll 30s linear infinite);
       background: #fff;color: $black;border-top: 1px solid $black;border-bottom: 1px solid $black;width: 4368px;
       li{margin-right: 72px;font-size: 18px;line-height: 2;display: inline-block;font-weight: 500;}
+    }
+  }
+}
+
+// 작은 pc (1440px)
+@media screen and (max-width: 1440px) {
+  header{
+    padding:0 120px 60px;
+  }
+  .section{
+    .wrap{
+      margin: 0 120px;
+    }
+  }
+}
+
+// 태블릿(1024px)
+@media screen and (max-width: 1024px) {
+  header{
+    padding:0 60px 60px;
+  }
+  .section{
+    .wrap{
+      margin: 0 24px;
     }
   }
 }

@@ -196,3 +196,22 @@
     content: "";position: absolute;top: 8px;left: 50%;width: 8px;height: 8px;background: #fff;border-radius: 20px;
   }
 }
+
+// 작은 pc (1440px)
+@media screen and (max-width: 1440px) {
+}
+
+// 태블릿(1024px)
+@media screen and (max-width: 1024px) {
+  .experience_history{
+    li{
+      a{
+        > div{
+          .cnt_wrap{
+            padding-left: 40px;
+          }
+        }
+      }
+    }
+  }
+}
