@@ -190,7 +190,7 @@
 }
 #scrollBtn{
   @include translateX-50;
-  position: absolute;bottom: 240px;left: 50%;width: 32px;height: 48px;border: 3px solid #fff;border-radius: 20px;
+  position: absolute;bottom: 20%;left: 50%;width: 32px;height: 48px;border: 3px solid #fff;border-radius: 20px;
   &::after{
     @include animation(scroll 2s infinite);
     content: "";position: absolute;top: 8px;left: 50%;width: 8px;height: 8px;background: #fff;border-radius: 20px;
