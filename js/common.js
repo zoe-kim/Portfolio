@@ -12,15 +12,13 @@ $(document).ready(function () {
   
   // 스크롤 이벤트
   $(window).on('scroll', function () {
-    
-    // #topBtn
+    // #topBtn 등장
     if ($(this).scrollTop() < 20) {
       gsap.to('#topBtn', {display: 'none', opacity: 0, duration: 0.5});
     } else {
       if ($(this).scrollTop() === $(document).height() - $(window).height()) gsap.to('#topBtn', {display: 'block', opacity: 1, bottom: 60, duration: 0.5})
       else gsap.to('#topBtn', {display: 'block', opacity: 1, bottom: 30, duration: 0.5})
     }
-    
     // 헤더 상단 고정 & 풀기
     var $header = $("header");
     if(scrollY < $(window).height()){
@@ -34,7 +32,5 @@ $(document).ready(function () {
       $header.addClass("fixed");
       $header.find(">div").attr("class","shadow2");
     }
-
   });
-  
 });

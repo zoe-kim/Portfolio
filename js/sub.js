@@ -13,7 +13,7 @@ $(document).ready(function () {
     const scrollY = $(this).scrollTop() + $(this).height()*2/3; // 전체 창의 2/3 추가
 
     // .movetop 애니메이션
-    $('.minumsa section').each(function () {
+    $('#minumsa section').each(function () {
       if (scrollY > $(this).offset().top) $(this).find('.movetop').addClass('on');
       else $(this).find('.movetop').removeClass('on');
     });

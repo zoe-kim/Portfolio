@@ -256,6 +256,28 @@ header, nav, section, footer {
   }
 }
 
+@-webkit-keyframes scroll {
+  0%, 100% {
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+  }
+  40%, 80% {
+    -webkit-transform: translateX(-50%) translateY(10px);
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+@keyframes scroll {
+  0%, 100% {
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+  }
+  40%, 80% {
+    -webkit-transform: translateX(-50%) translateY(10px);
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
 #skip a {
   position: absolute;
   top: 0;
@@ -393,6 +415,39 @@ header.fixed {
 
 header.fixed #header_wrap {
   border-radius: 0;
+}
+
+.scrollBtn {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  width: 32px;
+  height: 48px;
+  border: 3px solid #1E1E1E;
+  border-radius: 20px;
+}
+
+.scrollBtn::after {
+  -webkit-animation: scroll 2s infinite;
+  animation: scroll 2s infinite;
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: #1E1E1E;
+  border-radius: 20px;
+}
+
+.scrollBtn.w {
+  border-color: #fff;
+}
+
+.scrollBtn.w::after {
+  background: #fff;
 }
 
 #topBtn {

@@ -94,6 +94,20 @@ header, nav, section, footer{display: block;}
       transform: translateX(-50%) rotate(360deg);
   }
 }
+@keyframes scroll {
+  0%, 100% {
+    -moz-transform:translateX(-50%) translateY(0);
+    -ms-transform:translateX(-50%) translateY(0);
+    -webkit-transform:translateX(-50%) translateY(0);
+    transform:translateX(-50%) translateY(0);
+  }
+  40%, 80% {
+    -moz-transform:translateX(-50%) translateY(10px);
+    -ms-transform:translateX(-50%) translateY(10px);
+    -webkit-transform:translateX(-50%) translateY(10px);
+    transform:translateX(-50%) translateY(10px);
+  }
+}
 
 // skip navigation
 #skip a{
@@ -143,6 +157,20 @@ header{
 header.fixed{
   position: fixed; top: 0 !important;padding: 0;
   #header_wrap{border-radius: 0;}
+}
+.scrollBtn{
+  @include translateX-50;
+  position: absolute;bottom: 30%;left: 50%;width: 32px;height: 48px;border: 3px solid $black;border-radius: 20px;
+  &::after{
+    @include animation(scroll 2s infinite);
+    content: "";position: absolute;top: 8px;left: 50%;width: 8px;height: 8px;background: $black;border-radius: 20px;
+  }
+}
+.scrollBtn.w{
+  border-color: #fff;
+  &::after{
+    background: #fff;
+  }
 }
 #topBtn{
   position: fixed;bottom: 30px;right: 30px;width: 64px;height: 160px;display: none;z-index: 800;
