@@ -121,7 +121,6 @@ body{
   *{box-sizing: border-box;}
 }
 
-// pc (1920px)
 header{
   position: absolute;width: 100%;padding:0 240px 60px;z-index: 900;transition-property: padding !important;
   #header_wrap{
@@ -148,7 +147,7 @@ header{
       }
       .dark{
         font-size: 32px;@include transition(all 0.3s);
-        &:hover, &:focus-visible{color: $yellow;@include transition(all 0.3s);}
+        &:hover, &:focus-visible{color: $dark;@include transition(all 0.3s);}
       }
     }
   }
@@ -191,7 +190,7 @@ header.fixed{
   }
   .round{
     @include animation(round 10s infinite linear);
-    position: absolute;bottom: -18%;left: 50%;width: 120px;
+    position: absolute;bottom: -30%;left: 50%;width: 120px;height: 100%;background: url("../images/common/topBtn_round.png") no-repeat left / contain;z-index: -1;
   }
 }
 .section{
@@ -213,10 +212,56 @@ footer{
     position: absolute;bottom: 0;overflow: hidden;width: 100%;
     ul{
       @include animation(horizontalscroll 30s linear infinite);
-      background: #fff;color: $black;border-top: 1px solid $black;border-bottom: 1px solid $black;width: 4368px;
+      background: #fff;color: $black;border-top: 2px solid $black;border-bottom: 2px solid $black;width: 4368px;
       li{margin-right: 72px;font-size: 18px;line-height: 2;display: inline-block;font-weight: 500;}
     }
   }
+}
+
+// dark mode
+@media (prefers-color-scheme: dark) {
+  body{color: $d_white1;background: $d_black1;cursor: url("../images/common/cursor_dark.png"), auto;}
+  
+  header{
+    #header_wrap{
+      .wrap{
+        .pc_nav{
+          ul{
+            li{
+              &:hover a, a:focus-visible{color: $d_black1;}
+            }
+          }
+        }
+        .dark{
+          &:hover, &:focus-visible{color: $light;}
+        }
+      }
+    }
+  }
+  .scrollBtn{
+    border-color: $d_white1;
+    &::after{
+      background: $d_white1;
+    }
+  }
+  #topBtn{
+    .arrow_top{
+      background: $d_white1;
+    }
+    .arrow_btm{
+      background: $d_white1;
+    }
+    .round{
+      background-image: url("../images/common/topBtn_round_w.png");
+    }
+  }
+  footer{
+    .flow{
+      ul{
+        background: $d_black1;color: $d_white1;border-color: $d_white1;
+      }
+    }
+  }  
 }
 
 // 작은 pc (1440px)

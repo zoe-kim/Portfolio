@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import "_var", "_mixin";
 
-// pc (1920px)
 #intro{
   background: #fff;
   .wrap{
@@ -19,6 +18,7 @@
     @include justify-content(space-between);
     > div{
       width: calc(100%/3 - 20px);
+      h5{color: $green;}
       p{
         @include flex;
         @include align-items;
@@ -55,7 +55,7 @@
     li{
       position: relative;padding: 0 0 72px 62px;
       &::before{
-        content: "";position: absolute;top: 22px;left: 4px;bottom: -3px;width: 3px;border-radius: 3px;background: #eee;
+        content: "";position: absolute;top: 22px;left: 5px;bottom: -3px;width: 2px;border-radius: 2px;background: #eee;
       }
       &:last-child{
         padding-bottom: 0;
@@ -181,6 +181,134 @@
     }
     strong{@include transition(all 0.5s);opacity: 1;}
   }
+}
+
+// dark mode
+@media (prefers-color-scheme: dark) {
+  .content_box{background: $d_black2;}
+
+  #intro{background: $d_black2;}
+  #about{
+    .content{
+      > div{
+        h5{color: $purple;}
+        p{
+          span{
+            #today{color: $d_white2;}
+          }
+        }
+      }
+      .accordion{
+        .acdnHeader{border-color: $d_white1;}
+        .acdnHeader.on{border-color: $light;}
+      }    
+    }
+  }
+  #experience{
+    .experience_history{
+      li{
+        &::before{
+          background: $d_black2;
+        }
+        &::after{
+          background: $d_white1;
+        }
+        a{
+          > div{
+            .cnt_wrap{
+              .tag_wrap{
+                .tag{color: $d_white3;}
+              }
+            }
+          }
+        }
+      }
+    }  
+  }
+  #awards{
+    .swiper-container{
+      .swiper-wrapper{
+        .swiper-slide{
+          > div{
+            .content_box{
+              .txt_wrap{
+              }
+              .thumb_wrap{
+                position: relative;height: 258px;overflow: hidden;
+                img{position: absolute;height: 100%;@include transition(all 0.3s);}
+                &:hover img, &:focus img{
+                  @include transform(scale(1.1));
+                  @include transition(all 0.3s);
+                }
+              }
+            }
+          }
+        }
+      }
+      .controller{
+        @include flex;
+        position: absolute;bottom: 0; z-index: 100;
+        .swiper-button-prev, .swiper-button-next{
+          @include transition(all 0.3s);
+          position: static;margin-top: 0;width: 42px;height: 42px;background: no-repeat 50% / cover;margin-right: 12px;border-radius: 42px;
+          &::after{display: none;} // 기본 파란색 버튼 없애기
+        }
+        .swiper-button-prev{
+          background-image: url("../images/main/awards/prev_btn.png");margin-left: 4px;margin-bottom: 4px;  // 그림자 잘림 해결
+          &:hover, &:focus{background-image: url("../images/main/awards/prev_btn_hover.png");}
+        }
+        .swiper-button-next{
+          background-image: url("../images/main/awards/next_btn.png");
+          &:hover, &:focus{background-image: url("../images/main/awards/next_btn_hover.png");}
+        }
+      }
+    }
+  }
+  #contact{
+    .contact_wrap{
+      text-align: center;margin-bottom: 120px;
+      .contact_btn{
+        @include transition(all 0.5s);
+        position: relative;display: inline-block;font-size: 42px;font-weight: 700;max-width: calc(100% - 20px);margin-right: 19px;
+        &::before{content: "";position: absolute;top: 10px;left: 10px;width: 100%;height: 100%;z-index: 1;background: $bg;}
+        span{
+          @include transition(all 0.1s);
+          position: relative;top: 0;left: 0;display: inline-block;z-index: 2;border: 3px solid $purple;padding: 16px 24px;
+        }
+        &::after{content: "";position: absolute;top: 16px;left: 16px;width: 100%;height: 100%;z-index: 0;border: 3px solid $black;@include transition(all 0.5s);}
+        &:hover{
+          color: $purple;@include transition(all 0.3s);
+          &::after{border-color: $purple;background: rgba(209, 161, 255, .5);@include transition(all 0.3s);}
+        }
+      }
+      strong{@include transition(all 0.5s);display: block;margin-top: 60px;opacity: 0;}
+    }
+    .contact_bg{
+      text-align: center;
+      img{
+        @include transition(all 0.5s);
+        position: absolute;bottom: -100px;opacity: 0;
+        &:nth-child(odd){bottom: -50px;}
+        &:nth-child(1){left: 350px;}
+        &:nth-child(2){left: 250px;}
+        &:nth-child(3){left: 150px;}
+        &:nth-child(4){left: 50px;}
+  
+        &:nth-child(5){right: 350px;}
+        &:nth-child(6){right: 250px;}
+        &:nth-child(7){right: 150px;}
+        &:nth-child(8){right: 50px;}
+      }
+    }
+    .contact_wrap.on{
+      .contact_btn span{top: 10px;left: 10px;}
+      + .contact_bg img{
+        bottom: 30px;opacity: 1;
+        &:nth-child(odd){bottom: 80px;}
+      }
+      strong{@include transition(all 0.5s);opacity: 1;}
+    }
+  }  
 }
 
 // 작은 pc (1440px)
