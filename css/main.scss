@@ -102,7 +102,7 @@
           .content_box{
             padding: 0;overflow: hidden;margin: 0 4px;
             .txt_wrap{
-              display: block;padding: 20px 16px;background: url("../images/awards/txt_wrap_bg.png") no-repeat left / contain;
+              display: block;padding: 20px 16px;background: url("../images/main/awards/txt_wrap_bg.png") no-repeat left / contain;
               strong{line-height: 1.6;}
               .date{display: block;text-align: right;}
             }
@@ -127,12 +127,12 @@
         &::after{display: none;} // 기본 파란색 버튼 없애기
       }
       .swiper-button-prev{
-        background-image: url("../images/awards/prev_btn.png");margin-left: 4px;margin-bottom: 4px;  // 그림자 잘림 해결
-        &:hover, &:focus{background-image: url("../images/awards/prev_btn_hover.png");}
+        background-image: url("../images/main/awards/prev_btn.png");margin-left: 4px;margin-bottom: 4px;  // 그림자 잘림 해결
+        &:hover, &:focus{background-image: url("../images/main/awards/prev_btn_hover.png");}
       }
       .swiper-button-next{
-        background-image: url("../images/awards/next_btn.png");
-        &:hover, &:focus{background-image: url("../images/awards/next_btn_hover.png");}
+        background-image: url("../images/main/awards/next_btn.png");
+        &:hover, &:focus{background-image: url("../images/main/awards/next_btn_hover.png");}
       }
     }
   }

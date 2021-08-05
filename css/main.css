@@ -217,7 +217,7 @@
 #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap {
   display: block;
   padding: 20px 16px;
-  background: url("../images/awards/txt_wrap_bg.png") no-repeat left/contain;
+  background: url("../images/main/awards/txt_wrap_bg.png") no-repeat left/contain;
 }
 
 #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap strong {
@@ -275,21 +275,21 @@
 }
 
 #awards .swiper-container .controller .swiper-button-prev {
-  background-image: url("../images/awards/prev_btn.png");
+  background-image: url("../images/main/awards/prev_btn.png");
   margin-left: 4px;
   margin-bottom: 4px;
 }
 
 #awards .swiper-container .controller .swiper-button-prev:hover, #awards .swiper-container .controller .swiper-button-prev:focus {
-  background-image: url("../images/awards/prev_btn_hover.png");
+  background-image: url("../images/main/awards/prev_btn_hover.png");
 }
 
 #awards .swiper-container .controller .swiper-button-next {
-  background-image: url("../images/awards/next_btn.png");
+  background-image: url("../images/main/awards/next_btn.png");
 }
 
 #awards .swiper-container .controller .swiper-button-next:hover, #awards .swiper-container .controller .swiper-button-next:focus {
-  background-image: url("../images/awards/next_btn_hover.png");
+  background-image: url("../images/main/awards/next_btn_hover.png");
 }
 
 #contact .contact_wrap {
