@@ -31,6 +31,7 @@ $(document).ready(function () {
   // #today 찾아서 내부에 오늘 날짜 출력
   const toDay = document.getElementById('today');
   toDay.innerHTML = `- ${ty}. ${tm}. ${td} 기준`;
+
   // Skills 아코디언
   const $acdn = $('.accordion');
   // 1) 초기 설정 : 마지막 .acdnHeader(aria의 state)와 .acdnPanel(tabIndex 0) 활성화 => 클래스 .on 추가
@@ -89,8 +90,6 @@ $(document).ready(function () {
   $('.acdnHeader').on('click', function () {
     if ($(this).is('.on')) $(this).find('.xi-angle-down-min').attr("class","xi-angle-up-min").parents('.tit').siblings('.tit').find('.xi-angle-up-min').attr("class","xi-angle-down-min");
   });
-
-  // #experience
 
   // #awards
   // Swiper 슬라이더 제어

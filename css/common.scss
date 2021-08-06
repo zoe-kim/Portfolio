@@ -121,6 +121,7 @@ body{
   *{box-sizing: border-box;}
 }
 
+// light mode
 header{
   position: absolute;width: 100%;padding:0 240px 60px;z-index: 900;transition-property: padding !important;
   #header_wrap{
@@ -145,9 +146,10 @@ header{
           }
         }
       }
-      .dark{
+      #toggleTheme{
         font-size: 32px;@include transition(all 0.3s);
         &:hover, &:focus-visible{color: $dark;@include transition(all 0.3s);}
+        i{margin-top: 6px;}
       }
     }
   }
@@ -200,7 +202,7 @@ header.fixed{
   }
 }
 footer{
-  position: relative;z-index: 0;background: $purple;
+  position: relative;z-index: 0;background: $purple;color: $black;
   .wrap{
     div{
       text-align: center;
@@ -212,16 +214,15 @@ footer{
     position: absolute;bottom: 0;overflow: hidden;width: 100%;
     ul{
       @include animation(horizontalscroll 30s linear infinite);
-      background: #fff;color: $black;border-top: 2px solid $black;border-bottom: 2px solid $black;width: 4368px;
-      li{margin-right: 72px;font-size: 18px;line-height: 2;display: inline-block;font-weight: 500;}
+      background: $green;color: $black;border-top: 2px solid $black;border-bottom: 2px solid $black;width: 4368px;
+      li{margin-right: 48px;font-size: 18px;line-height: 2;display: inline-block;font-weight: 500;}
     }
   }
 }
 
 // dark mode
-@media (prefers-color-scheme: dark) {
+html.dark{
   body{color: $d_white1;background: $d_black1;cursor: url("../images/common/cursor_dark.png"), auto;}
-  
   header{
     #header_wrap{
       .wrap{
@@ -232,7 +233,7 @@ footer{
             }
           }
         }
-        .dark{
+        #toggleTheme{
           &:hover, &:focus-visible{color: $light;}
         }
       }
@@ -256,12 +257,13 @@ footer{
     }
   }
   footer{
+    background: $green;
     .flow{
       ul{
-        background: $d_black1;color: $d_white1;border-color: $d_white1;
+        background: $purple;
       }
     }
-  }  
+  }
 }
 
 // 작은 pc (1440px)

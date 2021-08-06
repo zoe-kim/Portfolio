@@ -5,7 +5,27 @@ $(document).ready(function () {
     $('html, body').stop().animate({scrollTop: $($(this).attr('href')).offset().top}, 400, 'swing');
   });
 
-  // #topBtn 버튼을 클릭시 상단으로 이동
+  // 사용자가 다크 테마 사용시
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    // html에 .dark 추가
+    document.documentElement.classList.add('dark');
+    // #toggleIcon 아이콘 폰트 클래스명 변경
+    document.getElementById('toggleIcon').setAttribute('class', 'xi-sun')
+  }
+  
+  // #toggleTheme 버튼 클릭시
+  document.getElementById('toggleTheme').addEventListener('click', () => {
+    // html에 .dark 추가
+    document.documentElement.classList.toggle('dark');
+    // #toggleIcon 아이콘 폰트 클래스명 변경
+    if (document.getElementById('toggleIcon').getAttribute('class') == 'xi-moon') {
+      document.getElementById('toggleIcon').setAttribute('class', 'xi-sun');
+    } else {
+      document.getElementById('toggleIcon').setAttribute('class', 'xi-moon');
+    }
+  });
+
+  // #topBtn 버튼 클릭시 상단으로 이동
   $('#topBtn').on('click', function () {
     $('html, body').stop().animate({scrollTop: 0}); // html -> ie, body -> 크롬
   });
