@@ -10,7 +10,7 @@ $(document).ready(function () {
     // html에 .dark 추가
     document.documentElement.classList.add('dark');
     // #toggleIcon 아이콘 폰트 클래스명 변경
-    document.getElementById('toggleIcon').setAttribute('class', 'xi-sun')
+    document.getElementById('toggleIcon').setAttribute('class', 'xi-sun');
   }
   
   // #toggleTheme 버튼 클릭시
@@ -32,8 +32,8 @@ $(document).ready(function () {
   
   // 스크롤 이벤트
   $(window).on('scroll', function () {
-    // #topBtn 등장
-    if ($(this).scrollTop() < 20) {
+    // #topBtn
+    if ($(this).scrollTop() < 100) {
       gsap.to('#topBtn', {display: 'none', opacity: 0, duration: 0.5});
     } else {
       if ($(this).scrollTop() === $(document).height() - $(window).height()) gsap.to('#topBtn', {display: 'block', opacity: 1, bottom: 60, duration: 0.5})

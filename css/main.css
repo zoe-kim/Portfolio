@@ -40,9 +40,18 @@
   color: #55B36B;
 }
 
+#about .content > div p {
+  font-size: 14px;
+}
+
 #about .content > div strong {
   display: block;
   font-weight: 500;
+  font-size: 14px;
+}
+
+#about .content > div i {
+  font-size: 16px;
 }
 
 #about .content > div .icon {
@@ -57,6 +66,7 @@
 #about .content > div #today {
   color: gray;
   vertical-align: top;
+  font-size: 12px;
 }
 
 #about .content .accordion .acdnHeader {
@@ -65,6 +75,7 @@
   padding-left: 8px;
   text-align: left;
   border-left: 4px solid #1E1E1E;
+  font-size: 16px;
 }
 
 #about .content .accordion .acdnHeader i {
@@ -74,7 +85,6 @@
   position: absolute;
   right: 0;
   top: 50%;
-  padding: 0 10px;
 }
 
 #about .content .accordion .acdnHeader.on {
@@ -386,6 +396,8 @@
   position: absolute;
   bottom: -100px;
   opacity: 0;
+  width: 64px;
+  height: 64px;
 }
 
 #contact .contact_bg img:nth-child(odd) {
@@ -393,35 +405,35 @@
 }
 
 #contact .contact_bg img:nth-child(1) {
-  left: 350px;
+  left: 21%;
 }
 
 #contact .contact_bg img:nth-child(2) {
-  left: 250px;
+  left: 14%;
 }
 
 #contact .contact_bg img:nth-child(3) {
-  left: 150px;
+  left: 7%;
 }
 
 #contact .contact_bg img:nth-child(4) {
-  left: 50px;
+  left: 0;
 }
 
 #contact .contact_bg img:nth-child(5) {
-  right: 350px;
+  right: 21%;
 }
 
 #contact .contact_bg img:nth-child(6) {
-  right: 250px;
+  right: 14%;
 }
 
 #contact .contact_bg img:nth-child(7) {
-  right: 150px;
+  right: 7%;
 }
 
 #contact .contact_bg img:nth-child(8) {
-  right: 50px;
+  right: 0;
 }
 
 #contact .contact_wrap.on .contact_btn span {
@@ -518,55 +530,85 @@ html.dark #contact .contact_wrap .contact_btn:hover::after {
 }
 
 @media screen and (max-width: 1440px) {
+  #about .content > div {
+    width: calc(100%/3 - 1.38889vw);
+    line-height: 1.66667vw;
+  }
+  #about .content > div p {
+    font-size: 0.97222vw;
+  }
+  #about .content > div strong {
+    font-size: 0.97222vw;
+  }
+  #about .content > div i {
+    font-size: 1.11111vw;
+  }
+  #about .content > div #today {
+    font-size: 0.83333vw;
+  }
+  #about .content .accordion .acdnHeader {
+    font-size: 1.11111vw;
+  }
   #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .thumb_wrap {
-    height: 200px;
+    height: 13.88889vw;
   }
   #contact .contact_wrap {
     margin-bottom: 100px;
   }
-  #contact .contact_bg img {
-    position: absolute;
-    bottom: -100px;
-    opacity: 0;
+}
+
+@media screen and (max-width: 1320px) {
+  #about .content > div {
+    width: calc(100%/3 - 1.51515vw);
+    line-height: 1.81818vw;
   }
-  #contact .contact_bg img:nth-child(odd) {
-    bottom: -50px;
+  #about .content > div p {
+    font-size: 1.06061vw;
   }
-  #contact .contact_bg img:nth-child(1) {
-    left: 270px;
+  #about .content > div strong {
+    font-size: 1.06061vw;
   }
-  #contact .contact_bg img:nth-child(2) {
-    left: 180px;
+  #about .content > div i {
+    font-size: 1.21212vw;
   }
-  #contact .contact_bg img:nth-child(3) {
-    left: 90px;
+  #about .content > div #today {
+    font-size: 0.90909vw;
   }
-  #contact .contact_bg img:nth-child(4) {
-    left: 0px;
+  #about .content .accordion .acdnHeader {
+    font-size: 1.21212vw;
   }
-  #contact .contact_bg img:nth-child(5) {
-    right: 270px;
-  }
-  #contact .contact_bg img:nth-child(6) {
-    right: 180px;
-  }
-  #contact .contact_bg img:nth-child(7) {
-    right: 90px;
-  }
-  #contact .contact_bg img:nth-child(8) {
-    right: 0px;
-  }
-  #contact .contact_wrap.on + .contact_bg img {
-    bottom: 30px;
-    opacity: 1;
-  }
-  #contact .contact_wrap.on + .contact_bg img:nth-child(odd) {
-    bottom: 80px;
+  #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .thumb_wrap {
+    height: 15.15152vw;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1152px) {
+  #about .content > div {
+    width: calc(100%/3 - 1.73611vw);
+    line-height: 2.08333vw;
+  }
+  #about .content > div p {
+    font-size: 1.21528vw;
+  }
+  #about .content > div strong {
+    font-size: 1.21528vw;
+  }
+  #about .content > div i {
+    font-size: 1.38889vw;
+  }
+  #about .content > div #today {
+    font-size: 1.04167vw;
+  }
+  #about .content .accordion .acdnHeader {
+    font-size: 1.38889vw;
+  }
   #experience .experience_history li a > div .cnt_wrap {
-    padding-left: 40px;
+    padding-left: 3.47222vw;
+  }
+  #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .thumb_wrap {
+    height: 17.36111vw;
+  }
+  #contact .contact_bg img {
+    display: none;
   }
 }

@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "_var", "_mixin";
+@import "_var", "_mixin", "_function";
 
 // light mode
 #intro{
@@ -20,19 +20,21 @@
     > div{
       width: calc(100%/3 - 20px);line-height: 24px;
       h5{color: $green;}
-      strong{display: block;font-weight: 500;}
+      p{font-size: 14px;}
+      strong{display: block;font-weight: 500;font-size: 14px;}
+      i{font-size: 16px;}
       .icon{
         @include flex;
         @include align-items;
       }
-      #today{color: gray;vertical-align: top;}
+      #today{color: gray;vertical-align: top;font-size: 12px;}
     }
     .accordion{
       .acdnHeader{
-        position: relative;width: 100%;padding-left: 8px;text-align: left;border-left: 4px solid $black;
+        position: relative;width: 100%;padding-left: 8px;text-align: left;border-left: 4px solid $black;font-size: 16px;
         i{
           @include translateY-50;
-          content: "";position: absolute;right: 0;top: 50%;padding: 0 10px;
+          content: "";position: absolute;right: 0;top: 50%;
         }
       }
       .acdnHeader.on{border-color: $purple;}
@@ -159,18 +161,17 @@
     text-align: center;
     img{
       @include transition(all 0.5s);
-      position: absolute;bottom: -100px;opacity: 0;
+      position: absolute;bottom: -100px;opacity: 0;width: 64px;height: 64px;
       &:nth-child(odd){bottom: -50px;}
-      &:nth-child(1){left: 350px;}
-      &:nth-child(2){left: 250px;}
-      &:nth-child(3){left: 150px;}
-      &:nth-child(4){left: 50px;}
-
-      &:nth-child(5){right: 350px;}
-      &:nth-child(6){right: 250px;}
-      &:nth-child(7){right: 150px;}
-      &:nth-child(8){right: 50px;}
-    }
+      &:nth-child(1){left: 21%;}
+      &:nth-child(2){left: 14%;}
+      &:nth-child(3){left: 7%}
+      &:nth-child(4){left: 0;}
+      &:nth-child(5){right: 21%;}
+      &:nth-child(6){right: 14%;}
+      &:nth-child(7){right: 7%;}
+      &:nth-child(8){right: 0;}
+  }
   }
   .contact_wrap.on{
     .contact_btn span{top: 10px;left: 10px;}
@@ -258,8 +259,22 @@ html.dark{
   }
 }
 
-// 작은 pc (1440px)
+// 작은 pc (1440px) - vw변환해서 1440px 비율 기준으로, 더 작은 pc 전까지 유지
 @media screen and (max-width: 1440px) {
+  #about{
+    .content{
+      > div{
+        width: calc(100%/3 - #{vw-calc1440(20)});line-height: vw-calc1440(24);
+        p{font-size: vw-calc1440(14);}
+        strong{font-size: vw-calc1440(14);}
+        i{font-size: vw-calc1440(16);}
+        #today{font-size: vw-calc1440(12);}
+      }
+      .accordion{
+        .acdnHeader{font-size: vw-calc1440(16);}
+      }  
+    }
+  }
   #awards{
     .swiper-container{
       .swiper-wrapper{
@@ -267,7 +282,7 @@ html.dark{
           > div{
             .content_box{
               .thumb_wrap{
-                height: 200px;
+                height: vw-calc1440(200);
               }
             }
           }
@@ -279,43 +294,89 @@ html.dark{
     .contact_wrap{
       margin-bottom: 100px;
     }
-    .contact_bg{
-      img{
-        position: absolute;bottom: -100px;opacity: 0;
-        &:nth-child(odd){bottom: -50px;}
-        &:nth-child(1){left: 270px;}
-        &:nth-child(2){left: 180px;}
-        &:nth-child(3){left: 90px;}
-        &:nth-child(4){left: 0px;}
-  
-        &:nth-child(5){right: 270px;}
-        &:nth-child(6){right: 180px;}
-        &:nth-child(7){right: 90px;}
-        &:nth-child(8){right: 0px;}
+  }
+}
+
+// 더 작은 pc (1320px) - vw변환해서 1320px 비율 기준으로, 태블릿 전까지 유지
+@media screen and (max-width: 1320px) {
+  #about{
+    .content{
+      > div{
+        width: calc(100%/3 - #{vw-calc1320(20)});line-height: vw-calc1320(24);
+        p{font-size: vw-calc1320(14);}
+        strong{font-size: vw-calc1320(14);}
+        i{font-size: vw-calc1320(16);}
+        #today{font-size: vw-calc1320(12);}
       }
+      .accordion{
+        .acdnHeader{font-size: vw-calc1320(16);}
+      }  
     }
-    .contact_wrap.on{
-      + .contact_bg img{
-        bottom: 30px;opacity: 1;
-        &:nth-child(odd){bottom: 80px;}
+  }
+  #awards{
+    .swiper-container{
+      .swiper-wrapper{
+        .swiper-slide{
+          > div{
+            .content_box{
+              .thumb_wrap{
+                height: vw-calc1320(200);
+              }
+            }
+          }
+        }
       }
     }
   }
 }
 
-// 태블릿(1024px)
-@media screen and (max-width: 1024px) {
+// 태블릿(1152px) - vw변환해서 1152px 비율 기준으로, 모바일 전까지 유지
+@media screen and (max-width: 1152px) {
+  #about{
+    .content{
+      > div{
+        width: calc(100%/3 - #{vw-calc1152(20)});line-height: vw-calc1152(24);
+        p{font-size: vw-calc1152(14);}
+        strong{font-size: vw-calc1152(14);}
+        i{font-size: vw-calc1152(16);}
+        #today{font-size: vw-calc1152(12);}
+      }
+      .accordion{
+        .acdnHeader{font-size: vw-calc1152(16);}
+      }  
+    }
+  }
   #experience{
     .experience_history{
       li{
         a{
           > div{
             .cnt_wrap{
-              padding-left: 40px;
+              padding-left: vw-calc1152(40);
             }
           }
         }
       }
     }  
+  }
+  #awards{
+    .swiper-container{
+      .swiper-wrapper{
+        .swiper-slide{
+          > div{
+            .content_box{
+              .thumb_wrap{
+                height: vw-calc1152(200);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #contact{
+    .contact_bg{
+      img{display: none;} // 태블릿 부터는 터치밖에 안되니까 hover 요소 없애기
+    }
   }
 }

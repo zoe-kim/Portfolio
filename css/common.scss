@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "_var", "_mixin";
+@import "_var", "_mixin", "_function";
 
 // tag reset
 body, h1, h2, h3, h4, h5, h6, p, ul, dl, dd, button{margin: 0;padding: 0;}
@@ -147,7 +147,7 @@ header{
         }
       }
       #toggleTheme{
-        font-size: 32px;@include transition(all 0.3s);
+        font-size: 32px;@include transition(all 1.2s);
         &:hover, &:focus-visible{color: $dark;@include transition(all 0.3s);}
         i{margin-top: 6px;}
       }
@@ -273,13 +273,13 @@ html.dark{
   }
   .section{
     .wrap{
-      margin: 0 120px;
+      margin: 0 vw-calc1440(120);
     }
   }
 }
 
-// 태블릿(1024px)
-@media screen and (max-width: 1024px) {
+// 더 작은 pc (1320px)
+@media screen and (max-width: 1320px) {
   header{
     padding:0 60px 60px;
   }
