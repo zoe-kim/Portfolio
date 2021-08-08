@@ -8,7 +8,7 @@
     height: 100%;
     h3{
       @include transform(translateY(-100%));
-      position: absolute;top: 50%;left: 0; font-size: 26px;text-align: center;width: 100%;font-weight: 400;line-height: 1.7;
+      position: absolute;top: 50%;left: 0; font-size: 32px;text-align: center;width: 100%;font-weight: 500;line-height: 1.5;
     }
   }
 }
@@ -80,12 +80,12 @@
             @include flex;
             @include flex-direction;
             @include justify-content(space-evenly);
-            padding-left: 60px;
-            .date{display: block;line-height: 32px;}
-            .title{@include multiEllipsis(2, 104px);overflow: hidden;line-height: 52px;}
+            padding-left: 48px;
+            .date{display: block;line-height: 32px;font-size: 18px;font-weight: 700;color: $green;}
+            .title{font-size: 26px;}
             .tag_wrap{
-              display: block;
-              .tag{display: inline-block;line-height: 30px;color: #888;}
+              display: block;margin-top: 26px;
+              .tag{display: inline-block;margin-right: 3px;font-size: 16px;color: gray;}
             }
           }
         }
@@ -102,10 +102,10 @@
           .content_box{
             padding: 0;overflow: hidden;margin: 0 4px;
             .txt_wrap{
-              display: block;padding: 20px 16px;background: url("../images/main/awards/txt_wrap_bg.png") no-repeat left / contain;
-              h5{color: $green;}
-              strong{line-height: 1.6;}
-              .date{display: block;text-align: right;}
+              display: block;padding: 20px 16px;background: url("../images/main/awards/txt_wrap_bg.png") no-repeat left / contain;font-size: 14px;
+              h6{color: $green;}
+              strong{line-height: 1.6;font-size: 20px;}
+              .date{display: block;text-align: right;margin-top: 16px;}
             }
             .thumb_wrap{
               position: relative;height: 258px;overflow: hidden;
@@ -195,7 +195,7 @@ html.dark{
       }
       .accordion{
         .acdnHeader{border-color: $d_white1;}
-        .acdnHeader.on{border-color: $green;}
+        .acdnHeader.on{border-color: $blue;}
       }    
     }
   }
@@ -211,14 +211,12 @@ html.dark{
         a{
           > div{
             .cnt_wrap{
-              .tag_wrap{
-                .tag{color: $d_white3;}
-              }
+              .date{color: $purple;}
             }
           }
-        }
+        }  
       }
-    }  
+    }
   }
   #awards{
     .swiper-container{
@@ -228,7 +226,7 @@ html.dark{
             .content_box{
               .txt_wrap{
                 background-image: url("../images/main/awards/txt_wrap_bg_dark.png");
-                h5{color: $purple;}
+                h6{color: $purple;}
               }
             }
           }
@@ -330,7 +328,7 @@ html.dark{
   }
 }
 
-// 태블릿(1152px) - vw변환해서 1152px 비율 기준으로, 모바일 전까지 유지
+// 태블릿 (1152px) - vw변환해서 1152px 비율 기준으로, 모바일 전까지 유지
 @media screen and (max-width: 1152px) {
   #about{
     .content{
@@ -345,14 +343,30 @@ html.dark{
         .acdnHeader{font-size: vw-calc1152(16);}
       }  
     }
-  }
+  }  
   #experience{
     .experience_history{
       li{
+        padding: 0 0 vw-calc1152(72) vw-calc1152(62);
+        &::before{
+          top: vw-calc1152(22);left: vw-calc1152(5);bottom: vw-calc1152(-3);width: vw-calc1152(2);border-radius: vw-calc1152(2);
+        }
+        &::after{
+          top: vw-calc1152(6);width: vw-calc1152(12);height: vw-calc1152(12);border-radius: vw-calc1152(12);
+        }
         a{
           > div{
+            .thumb_wrap{
+              width: vw-calc1152(240);height: vw-calc1152(180);border-radius: vw-calc1152(12);
+            }
             .cnt_wrap{
               padding-left: vw-calc1152(40);
+              .date{line-height: vw-calc1152(32);font-size: vw-calc1152(18);}
+              .title{font-size: vw-calc1152(26);}
+              .tag_wrap{
+                margin-top: vw-calc1152(26);
+                .tag{margin-right: vw-calc1152(3);font-size: vw-calc1152(16);}
+              }
             }
           }
         }
@@ -365,18 +379,27 @@ html.dark{
         .swiper-slide{
           > div{
             .content_box{
-              .thumb_wrap{
-                height: vw-calc1152(200);
+              margin: 0 vw-calc1152(4);
+              .txt_wrap{
+                padding: vw-calc1152(20) vw-calc1152(16);font-size: vw-calc1152(14);
+                strong{font-size: vw-calc1152(20);}
+                .date{margin-top: vw-calc1152(16);}
               }
+              .thumb_wrap{height: vw-calc1152(200);}
             }
           }
         }
       }
     }
-  }
+  }  
   #contact{
     .contact_bg{
       img{display: none;} // 태블릿 부터는 터치밖에 안되니까 hover 요소 없애기
     }
   }
+}
+
+// 모바일 (767px)
+@media screen and (max-width: 767px) {
+
 }

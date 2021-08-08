@@ -13,11 +13,11 @@
   position: absolute;
   top: 50%;
   left: 0;
-  font-size: 26px;
+  font-size: 32px;
   text-align: center;
   width: 100%;
-  font-weight: 400;
-  line-height: 1.7;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 #about .content {
@@ -189,34 +189,31 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding-left: 60px;
+  padding-left: 48px;
 }
 
 #experience .experience_history li a > div .cnt_wrap .date {
   display: block;
   line-height: 32px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #55B36B;
 }
 
 #experience .experience_history li a > div .cnt_wrap .title {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  white-space: normal;
-  max-height: 104px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  overflow: hidden;
-  line-height: 52px;
+  font-size: 26px;
 }
 
 #experience .experience_history li a > div .cnt_wrap .tag_wrap {
   display: block;
+  margin-top: 26px;
 }
 
 #experience .experience_history li a > div .cnt_wrap .tag_wrap .tag {
   display: inline-block;
-  line-height: 30px;
-  color: #888;
+  margin-right: 3px;
+  font-size: 16px;
+  color: gray;
 }
 
 #awards .swiper-container {
@@ -234,19 +231,22 @@
   display: block;
   padding: 20px 16px;
   background: url("../images/main/awards/txt_wrap_bg.png") no-repeat left/contain;
+  font-size: 14px;
 }
 
-#awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap h5 {
+#awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap h6 {
   color: #55B36B;
 }
 
 #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap strong {
   line-height: 1.6;
+  font-size: 20px;
 }
 
 #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap .date {
   display: block;
   text-align: right;
+  margin-top: 16px;
 }
 
 #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .thumb_wrap {
@@ -478,7 +478,7 @@ html.dark #about .content .accordion .acdnHeader {
 }
 
 html.dark #about .content .accordion .acdnHeader.on {
-  border-color: #55B36B;
+  border-color: #64C2FF;
 }
 
 html.dark #experience .experience_history li::before {
@@ -489,15 +489,15 @@ html.dark #experience .experience_history li::after {
   background: #f9f9f9;
 }
 
-html.dark #experience .experience_history li a > div .cnt_wrap .tag_wrap .tag {
-  color: #666;
+html.dark #experience .experience_history li a > div .cnt_wrap .date {
+  color: #D1A1FF;
 }
 
 html.dark #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap {
   background-image: url("../images/main/awards/txt_wrap_bg_dark.png");
 }
 
-html.dark #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap h5 {
+html.dark #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap h6 {
   color: #D1A1FF;
 }
 
@@ -602,8 +602,56 @@ html.dark #contact .contact_wrap .contact_btn:hover::after {
   #about .content .accordion .acdnHeader {
     font-size: 1.38889vw;
   }
+  #experience .experience_history li {
+    padding: 0 0 6.25vw 5.38194vw;
+  }
+  #experience .experience_history li::before {
+    top: 1.90972vw;
+    left: 0.43403vw;
+    bottom: -0.26042vw;
+    width: 0.17361vw;
+    border-radius: 0.17361vw;
+  }
+  #experience .experience_history li::after {
+    top: 0.52083vw;
+    width: 1.04167vw;
+    height: 1.04167vw;
+    border-radius: 1.04167vw;
+  }
+  #experience .experience_history li a > div .thumb_wrap {
+    width: 20.83333vw;
+    height: 15.625vw;
+    border-radius: 1.04167vw;
+  }
   #experience .experience_history li a > div .cnt_wrap {
     padding-left: 3.47222vw;
+  }
+  #experience .experience_history li a > div .cnt_wrap .date {
+    line-height: 2.77778vw;
+    font-size: 1.5625vw;
+  }
+  #experience .experience_history li a > div .cnt_wrap .title {
+    font-size: 2.25694vw;
+  }
+  #experience .experience_history li a > div .cnt_wrap .tag_wrap {
+    margin-top: 2.25694vw;
+  }
+  #experience .experience_history li a > div .cnt_wrap .tag_wrap .tag {
+    margin-right: 0.26042vw;
+    font-size: 1.38889vw;
+  }
+  #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box {
+    margin: 0 0.34722vw;
+  }
+  #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap {
+    padding: 1.73611vw 1.38889vw;
+    font-size: 1.21528vw;
+  }
+  #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap strong {
+    font-size: 1.73611vw;
+  }
+  #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap .date {
+    margin-top: 1.38889vw;
   }
   #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .thumb_wrap {
     height: 17.36111vw;

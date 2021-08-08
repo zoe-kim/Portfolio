@@ -305,11 +305,16 @@ body {
   font-weight: 400;
   background: #f9f9f9;
   cursor: url("../images/common/cursor1.png"), auto;
+  scrollbar-width: none;
 }
 
 body * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 header {
@@ -322,11 +327,15 @@ header {
 }
 
 header #header_wrap {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   position: relative;
   width: 100%;
   height: 64px;
-  background: -webkit-gradient(linear, left top, right top, from(#D1A1FF), to(#55B36B));
-  background: linear-gradient(to right, #D1A1FF, #55B36B);
+  background: -webkit-gradient(linear, left top, right top, from(#55B36B), color-stop(#D1A1FF), to(#64C2FF));
+  background: linear-gradient(to right, #55B36B, #D1A1FF, #64C2FF);
+  background-size: 200% 100%;
+  background-position: 0 0;
   border-radius: 24px;
   z-index: 1;
 }
@@ -392,8 +401,8 @@ header #header_wrap .wrap .pc_nav ul li:hover a, header #header_wrap .wrap .pc_n
 
 header #header_wrap .wrap #toggleTheme {
   font-size: 32px;
-  -webkit-transition: all 1.2s;
-  transition: all 1.2s;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
 }
 
 header #header_wrap .wrap #toggleTheme:hover, header #header_wrap .wrap #toggleTheme:focus-visible {
@@ -408,7 +417,7 @@ header #header_wrap .wrap #toggleTheme i {
 
 header .m_nav {
   visibility: hidden;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
 }
 
@@ -525,6 +534,10 @@ header.fixed #header_wrap {
   margin: 0 240px;
 }
 
+.section .wrap > .title {
+  margin-bottom: 36px;
+}
+
 footer {
   position: relative;
   z-index: 0;
@@ -577,12 +590,32 @@ html.dark body {
   cursor: url("../images/common/cursor_dark.png"), auto;
 }
 
-html.dark header #header_wrap .wrap .pc_nav ul li:hover a, html.dark header #header_wrap .wrap .pc_nav ul li a:focus-visible {
+html.dark header #header_wrap {
+  background-position: 100% 0;
+}
+
+html.dark header #header_wrap .wrap {
   color: #202124;
 }
 
 html.dark header #header_wrap .wrap #toggleTheme:hover, html.dark header #header_wrap .wrap #toggleTheme:focus-visible {
   color: #ffc72c;
+}
+
+html.dark header #header_wrap .wrap .menu_wrap {
+  background: #35363A;
+}
+
+html.dark header #header_wrap .wrap .menu_wrap .menu li a {
+  color: #f9f9f9;
+}
+
+html.dark header #header_wrap .wrap .menu_wrap .menu li:hover a, html.dark header #header_wrap .wrap .menu_wrap .menu li a:focus-visible {
+  color: #D1A1FF;
+}
+
+html.dark header #header_wrap .wrap .menu_wrap .menu_close {
+  background-image: url("../images/common/close_btn_w.png");
 }
 
 html.dark .scrollBtn {
@@ -606,7 +639,7 @@ html.dark #topBtn .round {
 }
 
 html.dark footer {
-  background: #55B36B;
+  background: #64C2FF;
 }
 
 html.dark footer .flow ul {
@@ -628,5 +661,80 @@ html.dark footer .flow ul {
   }
   .section .wrap {
     margin: 0 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    padding: 0 40px 40px;
+  }
+  header #header_wrap .wrap .pc_nav {
+    display: none;
+  }
+  header #header_wrap .wrap .m_nav {
+    visibility: visible;
+    max-height: 64px;
+    overflow: visible;
+  }
+  header #header_wrap .wrap .m_nav .logo a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url("../images/common/favicon.ico") no-repeat center/cover;
+  }
+  header #header_wrap .wrap .m_nav .menu_open {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 52px;
+    width: 20px;
+    height: 20px;
+    background: url("../images/common/menu_open_btn.png") no-repeat center/cover;
+  }
+  header #header_wrap .wrap .m_nav .menu_dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1E1E1E;
+    opacity: 0;
+  }
+  header #header_wrap .wrap .m_nav .menu_wrap {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background: #fff;
+    padding: 20px;
+    visibility: hidden;
+  }
+  header #header_wrap .wrap .m_nav .menu_wrap .menu li a {
+    display: block;
+    margin: 30px 0;
+    padding: 10px 0;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  header #header_wrap .wrap .m_nav .menu_wrap .menu li:hover a, header #header_wrap .wrap .m_nav .menu_wrap .menu li a:focus-visible {
+    color: #55B36B;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  header #header_wrap .wrap .m_nav .menu_wrap .menu_close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: url("../images/common/close_btn.png") no-repeat center/cover;
+  }
+  .section .wrap {
+    margin: 0 12px;
   }
 }

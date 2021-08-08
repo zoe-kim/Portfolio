@@ -119,13 +119,16 @@ header, nav, section, footer{display: block;}
 body{
   font-family: "DM Sans", "Noto Sans KR", sans-serif;font-size: 16px;color: $black;line-height: 1;font-weight: 400;background: $bg;cursor: url("../images/common/cursor1.png"), auto;
   *{box-sizing: border-box;}
+  &::-webkit-scrollbar{display: none;}   // 스크롤 기능은 살리되 스크롤바 숨기기 - Chrome, Safari, Opera
+  scrollbar-width: none;                        // Firefox
 }
 
 // light mode
 header{
   position: absolute;width: 100%;padding:0 240px 60px;z-index: 900;transition-property: padding !important;
   #header_wrap{
-    position: relative;width: 100%;height: 64px;background: linear-gradient(to right, $purple, $green);border-radius: 24px;z-index: 1;
+    @include transition(all 0.3s);
+    position: relative;width: 100%;height: 64px;background: linear-gradient(to right, $green, $purple, $blue);background-size: 200% 100%;background-position: 0 0;border-radius: 24px;z-index: 1;
     .wrap{
       @include flex;
       @include align-items;
@@ -147,13 +150,13 @@ header{
         }
       }
       #toggleTheme{
-        font-size: 32px;@include transition(all 1.2s);
+        font-size: 32px;@include transition(all 0.8s);
         &:hover, &:focus-visible{color: $dark;@include transition(all 0.3s);}
         i{margin-top: 6px;}
       }
     }
   }
-  .m_nav{visibility: hidden;height: 0;overflow: hidden;}
+  .m_nav{visibility: hidden;max-height: 0;overflow: hidden;}
 }
 header.fixed{
   position: fixed; top: 0 !important;padding: 0;
@@ -199,6 +202,7 @@ header.fixed{
   padding-top: 124px;
   .wrap{
     margin: 0 240px;
+    > .title{margin-bottom: 36px;}
   }
 }
 footer{
@@ -225,16 +229,21 @@ html.dark{
   body{color: $d_white1;background: $d_black1;cursor: url("../images/common/cursor_dark.png"), auto;}
   header{
     #header_wrap{
+      background-position: 100% 0;
       .wrap{
-        .pc_nav{
-          ul{
-            li{
-              &:hover a, a:focus-visible{color: $d_black1;}
-            }
-          }
-        }
+        color: $d_black1;
         #toggleTheme{
           &:hover, &:focus-visible{color: $light;}
+        }
+        .menu_wrap{
+          background: $d_black2;
+          .menu{
+            li{
+              a {color: $d_white1;}
+              &:hover a, a:focus-visible{color: $purple;}
+            }
+          }
+          .menu_close{background-image: url("../images/common/close_btn_w.png");}
         }
       }
     }
@@ -257,7 +266,7 @@ html.dark{
     }
   }
   footer{
-    background: $green;
+    background: $blue;
     .flow{
       ul{
         background: $purple;
@@ -286,6 +295,42 @@ html.dark{
   .section{
     .wrap{
       margin: 0 24px;
+    }
+  }
+}
+
+// 모바일 (767px)
+@media screen and (max-width: 767px) {
+  header{
+    padding:0 40px 40px;
+    #header_wrap{
+      .wrap{
+        .pc_nav{display: none;}
+        .m_nav{
+          visibility: visible;max-height: 64px;overflow: visible;
+          .logo a{display: block;width: 60px;height: 60px;background: url("../images/common/favicon.ico") no-repeat center / cover;}
+          .menu_open{
+            @include translateY-50;
+            position: absolute;top: 50%;right: 52px; width: 20px;height: 20px;background: url("../images/common/menu_open_btn.png") no-repeat center / cover;
+          }
+          .menu_dim{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: $black;opacity: 0;}
+          .menu_wrap{
+            position: fixed;top: 0;right: -100%;width: 60%;height: 100vh;background: #fff;padding: 20px;visibility:hidden;
+            .menu{
+              li{
+                a {display: block;margin: 30px 0;padding: 10px 0;font-size: 32px;font-weight: 700;line-height: 1.3;@include transition(all 0.3s);}
+                &:hover a, a:focus-visible{color: $green;@include transition(all 0.5s);}
+              }
+            }
+            .menu_close{position: absolute;top: 20px;right: 20px;width: 20px; height: 20px;background: url("../images/common/close_btn.png") no-repeat center / cover;}
+          }
+        }
+      }
+    }
+  }
+  .section{
+    .wrap{
+      margin: 0 12px;
     }
   }
 }
