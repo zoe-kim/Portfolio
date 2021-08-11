@@ -8,7 +8,19 @@
     height: 100%;
     h3{
       @include transform(translateY(-100%));
-      position: absolute;top: 50%;left: 0; font-size: 32px;text-align: center;width: 100%;font-weight: 500;line-height: 1.5;
+      position: absolute;top: 50%;left: 0; font-size: 32px;text-align: center;width: 100%;font-weight: 500;line-height: 42px;
+      span{
+        @include flex;
+        @include align-items;
+        @include justify-content;
+        ul{
+          height: 60px;overflow: hidden;
+          li{
+            margin-bottom: 60px;font-family: "Shadows Into Light";font-size: 42px;
+            &:first-child{@include animation(txtUp 8s infinite);}
+          }
+        }
+      }
     }
   }
 }

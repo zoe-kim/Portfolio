@@ -17,7 +17,35 @@
   text-align: center;
   width: 100%;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 42px;
+}
+
+#intro .wrap h3 span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#intro .wrap h3 span ul {
+  height: 60px;
+  overflow: hidden;
+}
+
+#intro .wrap h3 span ul li {
+  margin-bottom: 60px;
+  font-family: "Shadows Into Light";
+  font-size: 42px;
+}
+
+#intro .wrap h3 span ul li:first-child {
+  -webkit-animation: txtUp 8s infinite;
+  animation: txtUp 8s infinite;
 }
 
 #about .content {

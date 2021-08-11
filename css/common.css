@@ -279,6 +279,60 @@ header, nav, section, footer {
   }
 }
 
+@-webkit-keyframes txtUp {
+  0% {
+    margin-top: 84px;
+  }
+  5% {
+    margin-top: 0px;
+  }
+  33% {
+    margin-top: 0px;
+  }
+  38% {
+    margin-top: -84px;
+  }
+  66% {
+    margin-top: -84px;
+  }
+  71% {
+    margin-top: -168px;
+  }
+  99% {
+    margin-top: -168px;
+  }
+  100% {
+    margin-top: -210px;
+  }
+}
+
+@keyframes txtUp {
+  0% {
+    margin-top: 84px;
+  }
+  5% {
+    margin-top: 0px;
+  }
+  33% {
+    margin-top: 0px;
+  }
+  38% {
+    margin-top: -84px;
+  }
+  66% {
+    margin-top: -84px;
+  }
+  71% {
+    margin-top: -168px;
+  }
+  99% {
+    margin-top: -168px;
+  }
+  100% {
+    margin-top: -210px;
+  }
+}
+
 #skip a {
   position: absolute;
   top: 0;
@@ -547,6 +601,7 @@ footer {
 
 footer .wrap div {
   text-align: center;
+  font-size: 14px;
 }
 
 footer .wrap div a {
@@ -639,7 +694,8 @@ html.dark #topBtn .round {
 }
 
 html.dark footer {
-  background: #64C2FF;
+  background: #35363A;
+  color: #f9f9f9;
 }
 
 html.dark footer .flow ul {
