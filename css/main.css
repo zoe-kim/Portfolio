@@ -17,7 +17,10 @@
   text-align: center;
   width: 100%;
   font-weight: 500;
-  line-height: 42px;
+}
+
+#intro .wrap h3 p {
+  letter-spacing: 2px;
 }
 
 #intro .wrap h3 span {
@@ -33,14 +36,17 @@
 }
 
 #intro .wrap h3 span ul {
-  height: 60px;
+  height: 100px;
   overflow: hidden;
 }
 
 #intro .wrap h3 span ul li {
-  margin-bottom: 60px;
+  margin-bottom: 100px;
   font-family: "Shadows Into Light";
   font-size: 42px;
+  line-height: 100px;
+  padding: 0 5px;
+  font-weight: bold;
 }
 
 #intro .wrap h3 span ul li:first-child {
@@ -343,7 +349,7 @@
 
 #contact .contact_wrap {
   text-align: center;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 #contact .contact_wrap .contact_btn {
