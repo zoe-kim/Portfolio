@@ -17,8 +17,8 @@
         ul{
           height: 100px;overflow: hidden;
           li{
-            margin-bottom: 100px;font-family: "Shadows Into Light";font-size: 42px;line-height: 100px;padding: 0 5px;font-weight: bold;
-            &:first-child{@include animation(txtUp 8s infinite);}
+            margin-bottom: 100px;font-family: "Shadows Into Light";font-size: 40px;line-height: 100px;padding: 0 5px;font-weight: bold;color: $green;
+            &:first-child{@include animation(txtUp 8s cubic-bezier(0.22, 1.07, 0.32, 1.28) infinite);}
           }
         }
       }
@@ -199,7 +199,20 @@
 // dark mode
 html.dark{
   .content_box{background: $d_black2;}
-  #intro{background: $d_black2;}
+  #intro{
+    background: $d_black2;
+    .wrap{
+      h3{
+        span{
+          ul{
+            li{
+              color: $purple;
+            }
+          }
+        }
+      }
+    }  
+  }
   #about{
     .content{
       > div{
