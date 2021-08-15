@@ -357,6 +357,7 @@ body {
   color: #1E1E1E;
   line-height: 1;
   font-weight: 400;
+  word-break: keep-all;
   background: #f9f9f9;
   cursor: url("../images/common/cursor1.png"), auto;
   scrollbar-width: none;

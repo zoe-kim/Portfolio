@@ -127,10 +127,10 @@ header, nav, section, footer{display: block;}
 
 // body
 body{
-  font-family: "DM Sans", "Noto Sans KR", sans-serif;font-size: 16px;color: $black;line-height: 1;font-weight: 400;background: $bg;cursor: url("../images/common/cursor1.png"), auto;
+  font-family: "DM Sans", "Noto Sans KR", sans-serif;font-size: 16px;color: $black;line-height: 1;font-weight: 400;word-break: keep-all;background: $bg;cursor: url("../images/common/cursor1.png"), auto;
   *{box-sizing: border-box;}
-  &::-webkit-scrollbar{display: none;}   // 스크롤 기능은 살리되 스크롤바 숨기기 - Chrome, Safari, Opera
-  scrollbar-width: none;                        // Firefox
+  &::-webkit-scrollbar{display: none;}  // 스크롤 기능은 살리되 스크롤바 숨기기 - Chrome, Safari, Opera
+  scrollbar-width: none;  // Firefox
 }
 
 // light mode
