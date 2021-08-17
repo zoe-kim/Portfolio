@@ -9,15 +9,15 @@
     h3{
       @include transform(translateY(-100%));
       position: absolute;top: 50%;left: 0; font-size: 32px;text-align: center;width: 100%;font-weight: 500;
-      p{letter-spacing: 2px;}
+      p{letter-spacing: 2px;line-height: 1.4;}
       span{
         @include flex;
         @include align-items;
         @include justify-content;
         ul{
-          height: 100px;overflow: hidden;
+          height: 70px;overflow: hidden;
           li{
-            margin-bottom: 100px;font-family: "Shadows Into Light";font-size: 40px;line-height: 100px;padding: 0 5px;font-weight: bold;color: $green;
+            margin-bottom: 70px;font-family: "Shadows Into Light";font-size: 40px;line-height: 70px;padding: 0 5px;font-weight: bold;color: $green;
             &:first-child{@include animation(txtUp 8s cubic-bezier(0.22, 1.07, 0.32, 1.28) infinite);}
           }
         }
@@ -427,5 +427,19 @@ html.dark{
 
 // 모바일 (767px)
 @media screen and (max-width: 767px) {
-
+  #intro{
+    .wrap{
+      h3{
+        font-size: 24px;
+        p{letter-spacing: 1px;}
+        span{
+          ul{
+            li{
+              font-size: 36px;
+            }
+          }
+        }
+      }
+    }
+  }  
 }
