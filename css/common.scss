@@ -14,27 +14,15 @@ button{font-family: inherit;font-size: inherit;color: inherit;border: none;backg
 header, nav, section, footer{display: block;}
 
 // common class
-.p_r{position: relative;}
-.p_a{position: absolute;}
 .blind{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
-.hidden{visibility: hidden;}
-
 .wrap{position: relative;z-index: 1;}
 .content{position: relative;}
 .content_box{background: #fff;padding: 20px 16px;border-radius: 24px;}
 
-.mr3{margin-right: 3px;}
 .mr8{margin-right: 8px;}
 
-.pt60{padding-top: 60px;}
-
-.pb60{padding-bottom: 60px;}
-
 .mt8{margin-top: 8px;}
-.mt12{margin-top: 12px;}
 .mt16{margin-top: 16px;}
-.mt24{margin-top: 24px;}
-.mt60{margin-top: 60px;}
 
 .mb4{margin-bottom: 4px;}
 .mb8{margin-bottom: 8px;}
@@ -42,28 +30,13 @@ header, nav, section, footer{display: block;}
 .mb16{margin-bottom: 16px;}
 .mb20{margin-bottom: 20px;}
 
-.font12{font-size: 12px;}
 .font14{font-size: 14px;}
-.font16{font-size: 16px;}
-.font20{font-size: 20px;}
-.font22{font-size: 22px;}
-.font24{font-size: 24px;}
-.font30{font-size: 30px;}
 .font32{font-size: 32px;}
 
-.regular{font-weight: 400;}
 .medium{font-weight: 500;}
-.bold{font-weight: 700;}
 
 .shadow1{box-shadow: 0 8px 16px rgba(0,0,0,0.2);}
 .shadow2{box-shadow: 0 2px 4px rgba(0,0,0,0.15);}
-
-.purple{color: $purple;}
-.green{color: $green;}
-
-.transition{@include transition(all 0.3s);}
-
-.roboto{font-family: "Roboto",sans-serif;}
 
 /* motion keyframes */
 @keyframes horizontalscroll {
@@ -135,6 +108,7 @@ body{
 
 // light mode
 header{
+  @include transition(all 0.3s);
   position: absolute;width: 100%;padding:0 240px 60px;z-index: 900;transition-property: padding !important;
   #header_wrap{
     @include transition(all 0.8s);
@@ -216,7 +190,7 @@ header.fixed{
   }
 }
 footer{
-  position: relative;z-index: 0;background: $purple;color: $black;padding: 40px 0 60px;
+  position: relative;z-index: 0;background: $purple;color: $black;padding: 40px 0 60px;font-family: "Roboto", sans-serif;
   .wrap{
     div{
       text-align: center;font-size: 14px;
