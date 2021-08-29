@@ -193,24 +193,15 @@
 }
 
 #experience .experience_history li a > div .thumb_wrap {
-  width: 240px;
-  height: 180px;
+  width: 318px;
+  height: 182px;
   border-radius: 12px;
   overflow: hidden;
 }
 
-#experience .experience_history li a > div .thumb_wrap img {
+#experience .experience_history li a > div .thumb_wrap .video_bg {
   width: 100%;
   height: 100%;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-#experience .experience_history li a > div .thumb_wrap:hover img, #experience .experience_history li a > div .thumb_wrapfocus img {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 #experience .experience_history li a > div .cnt_wrap {
@@ -659,8 +650,8 @@ html.dark #contact .contact_wrap .contact_btn:hover::after {
     border-radius: 1.04167vw;
   }
   #experience .experience_history li a > div .thumb_wrap {
-    width: 20.83333vw;
-    height: 15.625vw;
+    width: 27.60417vw;
+    height: 15.79861vw;
     border-radius: 1.04167vw;
   }
   #experience .experience_history li a > div .cnt_wrap {

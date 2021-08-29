@@ -82,12 +82,8 @@
         > div{
           @include flex;
           .thumb_wrap{
-            width: 240px;height: 180px;border-radius: 12px;overflow: hidden;
-            img{width: 100%;height: 100%;@include transition(all 0.3s);}
-            &:hover img, &focus img{
-              @include transform(scale(1.1));
-              @include transition(all 0.3s);
-            }
+            width: 318px;height: 182px;border-radius: 12px;overflow: hidden;
+            .video_bg{width: 100%;height: 100%;}
           }
           .cnt_wrap{
             @include flex;
@@ -383,7 +379,7 @@ html.dark{
         a{
           > div{
             .thumb_wrap{
-              width: vw-calc1152(240);height: vw-calc1152(180);border-radius: vw-calc1152(12);
+              width: vw-calc1152(318);height: vw-calc1152(182);border-radius: vw-calc1152(12);
             }
             .cnt_wrap{
               padding-left: vw-calc1152(40);
