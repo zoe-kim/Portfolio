@@ -698,8 +698,12 @@ html.dark #contact .contact_wrap .contact_btn:hover::after {
   }
   #intro .wrap h3 p {
     letter-spacing: 1px;
+    line-height: 1;
   }
   #intro .wrap h3 span ul li {
     font-size: 36px;
+  }
+  #intro .wrap h3 .pc {
+    display: none;
   }
 }

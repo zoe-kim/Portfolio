@@ -427,7 +427,7 @@ html.dark{
     .wrap{
       h3{
         font-size: 24px;
-        p{letter-spacing: 1px;}
+        p{letter-spacing: 1px;line-height: 1;}
         span{
           ul{
             li{
@@ -435,7 +435,8 @@ html.dark{
             }
           }
         }
+        .pc{display: none;}
       }
     }
-  }  
+  }
 }
