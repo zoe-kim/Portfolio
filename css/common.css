@@ -407,7 +407,7 @@ header.fixed #header_wrap {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   position: absolute;
-  bottom: 30%;
+  bottom: 24%;
   left: 50%;
   width: 32px;
   height: 48px;
@@ -709,6 +709,9 @@ html.dark footer .flow ul {
     width: 20px;
     height: 20px;
     background: url("../images/common/close_btn.png") no-repeat center/cover;
+  }
+  .section {
+    padding-top: 84px;
   }
   .section .wrap {
     margin: 0 12px;

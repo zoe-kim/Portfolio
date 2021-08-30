@@ -28,7 +28,6 @@
 #about{
   .content{
     @include flex;
-    @include flex-wrap;
     @include justify-content(space-between);
     > div{
       width: calc(100%/3 - 20px);line-height: 24px;
@@ -435,7 +434,90 @@ html.dark{
             }
           }
         }
-        .pc{display: none;}
+      }
+    }
+  }
+  #about{
+    .content{
+      display: block;
+      > div{
+        width: 100%;line-height: 24px;
+        &:not(:last-child){margin-bottom: 20px;}
+        p{font-size: 14px;}
+        strong{font-size: 14px;}
+        i{font-size: 16px;}
+        #today{font-size: 12px;}
+      }
+      .accordion{
+        .acdnHeader{font-size: 16px;}
+      }    
+    }
+  }
+  #experience{
+    .experience_history{
+      li{
+        padding: 0 0 48px 20px;
+        &::before{top: 13px;left: 3px;bottom: -1px;width: 1px;}
+        &::after{top: 3px;width: 7px;height: 7px;border-radius: 7px;}
+        a{
+          > div{
+            .thumb_wrap{width: 148px;height: 86px;border-radius: 12px;}
+            .cnt_wrap{
+              padding-left: 20px;
+              .date{font-size: 12px;line-height: 18px;}
+              .title{font-size: 16px;}
+              .tag_wrap{
+                margin-top: 10px;
+                .tag{font-size: 10px;}
+              }
+            }  
+          }
+        }
+      }
+    }  
+  }
+  #awards{
+    .swiper-container{
+      position: relative;padding-bottom: 66px;
+      .swiper-wrapper{
+        .swiper-slide{
+          > div{
+            .content_box{
+              padding: 0;overflow: hidden;margin: 0 4px;
+              .txt_wrap{
+                display: block;padding: 20px 16px;background: url("../images/main/awards/txt_wrap_bg.png") no-repeat left / contain;font-size: 14px;
+                h6{color: $green;}
+                strong{line-height: 1.6;font-size: 20px;}
+                .date{display: block;text-align: right;margin-top: 16px;}
+              }
+              .thumb_wrap{
+                position: relative;height: 258px;overflow: hidden;
+                img{position: absolute;width: 100%;min-height: 100%;@include transition(all 0.3s);}
+                &:hover img, &:focus img{
+                  @include transform(scale(1.1));
+                  @include transition(all 0.3s);
+                }
+              }
+            }
+          }
+        }
+      }
+      .controller{
+        @include flex;
+        position: absolute;bottom: 0; z-index: 100;
+        .swiper-button-prev, .swiper-button-next{
+          @include transition(all 0.3s);
+          position: static;margin-top: 0;width: 42px;height: 42px;background: no-repeat 50% / cover;margin-right: 12px;border-radius: 42px;
+          &::after{display: none;} // 기본 파란색 버튼 없애기
+        }
+        .swiper-button-prev{
+          background-image: url("../images/main/awards/prev_btn.png");margin-left: 4px;margin-bottom: 4px;  // 그림자 잘림 해결
+          &:hover, &:focus{background-image: url("../images/main/awards/prev_btn_hover.png");}
+        }
+        .swiper-button-next{
+          background-image: url("../images/main/awards/next_btn.png");
+          &:hover, &:focus{background-image: url("../images/main/awards/next_btn_hover.png");}
+        }
       }
     }
   }

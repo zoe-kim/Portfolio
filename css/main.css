@@ -60,8 +60,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -703,7 +701,146 @@ html.dark #contact .contact_wrap .contact_btn:hover::after {
   #intro .wrap h3 span ul li {
     font-size: 36px;
   }
-  #intro .wrap h3 .pc {
+  #about .content {
+    display: block;
+  }
+  #about .content > div {
+    width: 100%;
+    line-height: 24px;
+  }
+  #about .content > div:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  #about .content > div p {
+    font-size: 14px;
+  }
+  #about .content > div strong {
+    font-size: 14px;
+  }
+  #about .content > div i {
+    font-size: 16px;
+  }
+  #about .content > div #today {
+    font-size: 12px;
+  }
+  #about .content .accordion .acdnHeader {
+    font-size: 16px;
+  }
+  #experience .experience_history li {
+    padding: 0 0 48px 20px;
+  }
+  #experience .experience_history li::before {
+    top: 13px;
+    left: 3px;
+    bottom: -1px;
+    width: 1px;
+  }
+  #experience .experience_history li::after {
+    top: 3px;
+    width: 7px;
+    height: 7px;
+    border-radius: 7px;
+  }
+  #experience .experience_history li a > div .thumb_wrap {
+    width: 148px;
+    height: 86px;
+    border-radius: 12px;
+  }
+  #experience .experience_history li a > div .cnt_wrap {
+    padding-left: 20px;
+  }
+  #experience .experience_history li a > div .cnt_wrap .date {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  #experience .experience_history li a > div .cnt_wrap .title {
+    font-size: 16px;
+  }
+  #experience .experience_history li a > div .cnt_wrap .tag_wrap {
+    margin-top: 10px;
+  }
+  #experience .experience_history li a > div .cnt_wrap .tag_wrap .tag {
+    font-size: 10px;
+  }
+  #awards .swiper-container {
+    position: relative;
+    padding-bottom: 66px;
+  }
+  #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box {
+    padding: 0;
+    overflow: hidden;
+    margin: 0 4px;
+  }
+  #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap {
+    display: block;
+    padding: 20px 16px;
+    background: url("../images/main/awards/txt_wrap_bg.png") no-repeat left/contain;
+    font-size: 14px;
+  }
+  #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap h6 {
+    color: #55B36B;
+  }
+  #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap strong {
+    line-height: 1.6;
+    font-size: 20px;
+  }
+  #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .txt_wrap .date {
+    display: block;
+    text-align: right;
+    margin-top: 16px;
+  }
+  #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .thumb_wrap {
+    position: relative;
+    height: 258px;
+    overflow: hidden;
+  }
+  #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .thumb_wrap img {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .thumb_wrap:hover img, #awards .swiper-container .swiper-wrapper .swiper-slide > div .content_box .thumb_wrap:focus img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  #awards .swiper-container .controller {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+  }
+  #awards .swiper-container .controller .swiper-button-prev, #awards .swiper-container .controller .swiper-button-next {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    position: static;
+    margin-top: 0;
+    width: 42px;
+    height: 42px;
+    background: no-repeat 50% / cover;
+    margin-right: 12px;
+    border-radius: 42px;
+  }
+  #awards .swiper-container .controller .swiper-button-prev::after, #awards .swiper-container .controller .swiper-button-next::after {
     display: none;
+  }
+  #awards .swiper-container .controller .swiper-button-prev {
+    background-image: url("../images/main/awards/prev_btn.png");
+    margin-left: 4px;
+    margin-bottom: 4px;
+  }
+  #awards .swiper-container .controller .swiper-button-prev:hover, #awards .swiper-container .controller .swiper-button-prev:focus {
+    background-image: url("../images/main/awards/prev_btn_hover.png");
+  }
+  #awards .swiper-container .controller .swiper-button-next {
+    background-image: url("../images/main/awards/next_btn.png");
+  }
+  #awards .swiper-container .controller .swiper-button-next:hover, #awards .swiper-container .controller .swiper-button-next:focus {
+    background-image: url("../images/main/awards/next_btn_hover.png");
   }
 }
