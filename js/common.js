@@ -22,14 +22,14 @@ $(document).ready(function () {
     // .menu_wrap 내 키보드 제어 접근성
     // 1) $first에서 shift+tab 눌러 이전으로 나가는 경우, $last로 포커스 이동
     $first.on('keydown', function (e) {
-      if (e.shiftKey && e.keyCode === 9) {
+      if (e.shiftKey && e.key === 'Tab') {
         e.preventDefault();
         $last.focus();
       }
     })
     // 2) $last에서 (shift 없이)tab만 눌러 다음으로 나가는 경우, $first로 포커스 이동
     $last.on('keydown', function (e) {
-      if (!e.shiftKey && e.keyCode === 9) {
+      if (!e.shiftKey && e.key === 'Tab') {
         e.preventDefault();
         $first.focus();
       }
@@ -48,24 +48,21 @@ $(document).ready(function () {
     });
   });
 
-  // 사용자가 다크 테마 사용시
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // html에 .dark 추가
-    document.documentElement.classList.add('dark');
-    // #toggleIcon 아이콘 폰트 클래스명 변경
-    document.getElementById('toggleIcon').setAttribute('class', 'xi-sun');
-  }
-  
-  // #toggleTheme 버튼 클릭시
+  // 다크 테마: 저장된 설정(localStorage)이 우선, 없으면 OS 설정을 따름
+  const toggleIcon = document.getElementById('toggleIcon');
+  const applyTheme = (isDark) => {
+    document.documentElement.classList.toggle('dark', isDark);
+    toggleIcon.setAttribute('class', isDark ? 'xi-sun' : 'xi-moon');
+  };
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(savedTheme ? savedTheme === 'dark' : prefersDark);
+
+  // #toggleTheme 버튼 클릭시 테마 전환 후 선택을 저장
   document.getElementById('toggleTheme').addEventListener('click', () => {
-    // html에 .dark 추가
-    document.documentElement.classList.toggle('dark');
-    // #toggleIcon 아이콘 폰트 클래스명 변경
-    if (document.getElementById('toggleIcon').getAttribute('class') == 'xi-moon') {
-      document.getElementById('toggleIcon').setAttribute('class', 'xi-sun');
-    } else {
-      document.getElementById('toggleIcon').setAttribute('class', 'xi-moon');
-    }
+    const isDark = !document.documentElement.classList.contains('dark');
+    applyTheme(isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 
   // #topBtn 버튼 클릭시 상단으로 이동
@@ -73,27 +70,36 @@ $(document).ready(function () {
     $('html, body').stop().animate({scrollTop: 0}); // html -> ie, body -> 크롬
   });
   
-  // 스크롤 이벤트
-  $(window).on('scroll', function () {
+  // 스크롤 이벤트 (requestAnimationFrame으로 스로틀 - 매 프레임당 1회만 실행)
+  const $header = $("header");
+  let scrollTicking = false;
+  const handleScroll = function () {
+    const scrollTop = $(window).scrollTop();
+    const winHeight = $(window).height();
     // #topBtn
-    if ($(this).scrollTop() < 100) {
+    if (scrollTop < 100) {
       gsap.to('#topBtn', {display: 'none', opacity: 0, duration: 0.5});
     } else {
-      if ($(this).scrollTop() === $(document).height() - $(window).height()) gsap.to('#topBtn', {display: 'block', opacity: 1, bottom: 60, duration: 0.5})
+      if (scrollTop === $(document).height() - winHeight) gsap.to('#topBtn', {display: 'block', opacity: 1, bottom: 60, duration: 0.5})
       else gsap.to('#topBtn', {display: 'block', opacity: 1, bottom: 30, duration: 0.5})
     }
     // 헤더 상단 고정 & 풀기
-    var $header = $("header");
-    if(scrollY < $(window).height()){
+    if (scrollTop < winHeight) {
       $header.removeClass("fixed");
       $header.find(">div").attr("class","shadow1");
-      var $top = $(window).height()-$header.outerHeight();
-      var $header_p = $top+($header.outerHeight()*($(this).scrollTop()/$(window).height()));
-      $header.css({"top": $header_p});
-    }
-    else{
+      const top = winHeight - $header.outerHeight();
+      const headerPos = top + ($header.outerHeight() * (scrollTop / winHeight));
+      $header.css({"top": headerPos});
+    } else {
       $header.addClass("fixed");
       $header.find(">div").attr("class","shadow2");
+    }
+    scrollTicking = false;
+  };
+  $(window).on('scroll', function () {
+    if (!scrollTicking) {
+      window.requestAnimationFrame(handleScroll);
+      scrollTicking = true;
     }
   });
 });

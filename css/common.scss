@@ -319,3 +319,14 @@ html.dark{
     }
   }
 }
+/* 동작 줄이기(prefers-reduced-motion) 설정 사용자: 애니메이션/트랜지션 최소화 - 접근성 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

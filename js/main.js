@@ -37,32 +37,31 @@ $(document).ready(function () {
   // 1) 초기 설정 : 마지막 .acdnHeader(aria의 state)와 .acdnPanel(tabIndex 0) 활성화 => 클래스 .on 추가
   // 1-1) 아코디언 헤더
   $acdn.find('.tit:last-of-type .acdnHeader').addClass('on').attr({'aria-expanded': true, 'aria-disabled': true}).parents('.tit').siblings('.tit').children().attr({'aria-expanded': false});
-  // 1-2) 아코디언 패널
-  $acdn.find('.acdnPanel:last-of-type').addClass('on').attr({tabIndex: 0});
+  // 1-2) 아코디언 패널 : 모두 숨김(aria-hidden) 후 마지막 패널만 노출
+  $acdn.find('.acdnPanel').attr({tabIndex: -1, 'aria-hidden': true});
+  $acdn.find('.acdnPanel:last-of-type').addClass('on').attr({tabIndex: 0, 'aria-hidden': false});
   // 2) 키보드 제어 - 상단방향키(38), 하단방향키(40), home(36), end(35), enter/spacebar(click 이벤트가 대신 함)
   $('.acdnHeader').on('keydown', function (e) {
-    const key = e.keyCode;
-    //console.log(key);
-    switch (key) {
-      case 38:  //상단방향키
+    switch (e.key) {
+      case 'ArrowUp':
         if ($(this).is('.first')) {
           $(this).closest('.accordion').find('.last').focus();
         } else {
           $(this).parent().prev().prev().children().focus();
         }
         break;
-      case 40:  //하단방향키
+      case 'ArrowDown':
         if ($(this).is('.last')) {
           $(this).closest('.accordion').find('.first').focus();
         } else {
           $(this).parent().next().next().children().focus();
         }
         break;
-      case 36: //home
+      case 'Home':
         e.preventDefault();
         $(this).closest('.accordion').find('.first').focus();
         break;
-      case 35: //end
+      case 'End':
         e.preventDefault();
         $(this).closest('.accordion').find('.last').focus();
         break;
@@ -74,7 +73,7 @@ $(document).ready(function () {
       // 3-1) 아코디언 헤더 : 선택되어진 버튼은 활성화 / 나머지 버튼은 비활성화
       $(this).addClass('on').attr({'aria-expanded': true, 'aria-disabled': true}).parents('.tit').siblings('.tit').children().removeClass('on').attr({'aria-expanded': false}).removeAttr('aria-disabled');
       // 3-2) 아코디언 패널
-      $(this).parents('.tit').next().addClass('on').attr({tabIndex: 0}).siblings('.acdnPanel').removeClass('on').attr({tabIndex: -1});
+      $(this).parents('.tit').next().addClass('on').attr({tabIndex: 0, 'aria-hidden': false}).siblings('.acdnPanel').removeClass('on').attr({tabIndex: -1, 'aria-hidden': true});
     }
   });
   // 4) 아코디언 헤더가 focus, blur => .accordion.focus제어
@@ -125,5 +124,25 @@ $(document).ready(function () {
     mouseleave: function () {
       $(this).parent().removeClass('on');
     }
-  });  
+  });
+
+  // #experience 영상: 화면에 보일 때만 재생 (한꺼번에 자동재생 방지 → 초기 로딩/데이터 절약)
+  const videos = document.querySelectorAll('.video_bg');
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          const playPromise = video.play();
+          if (playPromise) playPromise.catch(() => {}); // 자동재생 차단 시 조용히 무시
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.25 });
+    videos.forEach((video) => videoObserver.observe(video));
+  } else {
+    // IntersectionObserver 미지원 환경 폴백: 전부 재생
+    videos.forEach((video) => video.play().catch(() => {}));
+  }
 });

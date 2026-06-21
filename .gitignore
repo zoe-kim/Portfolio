@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Sass build artifacts
+.sass-cache/
+*.css.map
+
+# Editor
+.vscode/
+.idea/
