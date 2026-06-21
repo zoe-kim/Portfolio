@@ -31,6 +31,8 @@ $(document).ready(function () {
   // #today 찾아서 내부에 오늘 날짜 출력
   const toDay = document.getElementById('today');
   toDay.innerHTML = `- ${ty}. ${tm}. ${td} 기준`;
+  // footer 저작권 끝 연도 자동 갱신
+  document.getElementById('copyrightYear').textContent = ty;
 
   // Skills 아코디언
   const $acdn = $('.accordion');

@@ -58,4 +58,4 @@ sass --watch css/main.scss css/main.css
 
 ---
 
-© Zoe. All Rights Reserved.
+© 2021–2026 Zoe. All Rights Reserved.
