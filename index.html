@@ -5,11 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Zoe의 웹 포트폴리오 사이트입니다. UX/UI 기반의 프론트엔드 엔지니어가 되고 싶습니다.">
+  <meta name="description" content="코딩하는 디자이너 Zoe의 웹 포트폴리오. UX/UI와 프론트엔드 작업을 담았습니다.">
   <title> Zoe’s Portfolio </title>
+
+  <!-- Open Graph / social share -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Zoe’s Portfolio">
+  <meta property="og:description" content="코딩하는 디자이너 Zoe의 웹 포트폴리오. UX/UI와 프론트엔드 작업을 담았습니다.">
+  <meta property="og:url" content="https://zoe-kim.github.io/Portfolio/">
+  <meta property="og:image" content="https://zoe-kim.github.io/Portfolio/video/portfolio.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zoe’s Portfolio">
+  <meta name="twitter:description" content="코딩하는 디자이너 Zoe의 웹 포트폴리오. UX/UI와 프론트엔드 작업을 담았습니다.">
+  <meta name="twitter:image" content="https://zoe-kim.github.io/Portfolio/video/portfolio.jpg">
+
   <link rel="apple-touch-icon" href="images/common/favicon.ico">
   <link rel="shortcut icon" href="images/common/favicon.ico">
   <link rel="icon" href="images/common/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=DM+Sans:regular,500,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:regular,500,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:regular,500,700&display=swap" rel="stylesheet">
@@ -230,7 +244,7 @@
           <a href="index.html">
             <div>
               <span class="thumb_wrap">
-                <video class="video_bg" poster="video/portfolio.jpg" autoplay muted playsinline preload="auto" loop>
+                <video class="video_bg" poster="video/portfolio.jpg" muted playsinline preload="metadata" loop>
                   <source src="video/portfolio.mp4" type="video/mp4">
                 </video>
               </span>
@@ -251,7 +265,7 @@
           <a target="_blank" rel="noreferrer noopener" href="https://zoe-kim.github.io/Minumsa/">
             <div>
               <span class="thumb_wrap">
-                <video class="video_bg" poster="video/minumsa.jpg" autoplay muted playsinline preload="auto" loop>
+                <video class="video_bg" poster="video/minumsa.jpg" muted playsinline preload="metadata" loop>
                   <source src="video/minumsa.MP4" type="video/mp4">
                 </video>
               </span>
@@ -270,10 +284,10 @@
         </li>
         <!-- 3. 영상 기반 소셜 플랫폼 잇-플 -->
         <li>
-          <a href="pdf/itpl.pdf" target="_blank">
+          <a href="pdf/itpl.pdf" target="_blank" rel="noopener noreferrer">
             <div>
               <span class="thumb_wrap">
-                <video class="video_bg" poster="video/itpl.jpg" autoplay muted playsinline preload="auto" loop>
+                <video class="video_bg" poster="video/itpl.jpg" muted playsinline preload="metadata" loop>
                   <source src="video/itpl.mp4" type="video/mp4">
                 </video>
               </span>
@@ -292,10 +306,10 @@
         </li>
         <!-- 4. 모바일 게임 ‘눕눕을 찾아서’ -->
         <li>
-          <a href="pdf/nubnub.pdf" target="_blank">
+          <a href="pdf/nubnub.pdf" target="_blank" rel="noopener noreferrer">
             <div>
               <span class="thumb_wrap">
-                <video class="video_bg" poster="video/nubnub.jpg" autoplay muted playsinline preload="auto" loop>
+                <video class="video_bg" poster="video/nubnub.jpg" muted playsinline preload="metadata" loop>
                   <source src="video/nubnub.mp4" type="video/mp4">
                 </video>
               </span>
@@ -314,10 +328,10 @@
         </li>
         <!-- 5. ‘블래닛’ CI 디자인 -->
         <li>
-          <a href="pdf/blenit.pdf" target="_blank">
+          <a href="pdf/blenit.pdf" target="_blank" rel="noopener noreferrer">
             <div>
               <span class="thumb_wrap">
-                <video class="video_bg" poster="video/blenit.jpg" autoplay muted playsinline preload="auto" loop>
+                <video class="video_bg" poster="video/blenit.jpg" muted playsinline preload="metadata" loop>
                   <source src="video/blenit.mp4" type="video/mp4">
                 </video>
               </span>
@@ -335,10 +349,10 @@
         </li>
         <!-- 6. 경제조기교육 게이미피케이션 앱 ‘안다미로’ -->
         <li>
-          <a href="pdf/andamiro.pdf" target="_blank">
+          <a href="pdf/andamiro.pdf" target="_blank" rel="noopener noreferrer">
             <div>
               <span class="thumb_wrap">
-                <video class="video_bg" poster="video/andamiro.jpg" autoplay muted playsinline preload="auto" loop>
+                <video class="video_bg" poster="video/andamiro.jpg" muted playsinline preload="metadata" loop>
                   <source src="video/andamiro.mp4" type="video/mp4">
                 </video>
               </span>
@@ -379,7 +393,7 @@
                   <span class="date">2021. 02</span>
                 </span>
                 <div class="thumb_wrap">
-                  <img src="images/main/awards/thumb1.jpg" alt="SW중심대학 공동해커톤 상장과 판넬">
+                  <img loading="lazy" src="images/main/awards/thumb1.jpg" alt="SW중심대학 공동해커톤 상장과 판넬">
                 </div>
               </div>
             </div>
@@ -393,7 +407,7 @@
                   <span class="date">2019. 09</span>
                 </span>
                 <div class="thumb_wrap">
-                  <img src="images/main/awards/thumb2.jpg" alt="서울여대 SWU IT 해커톤 수상 판넬">
+                  <img loading="lazy" src="images/main/awards/thumb2.jpg" alt="서울여대 SWU IT 해커톤 수상 판넬">
                 </div>
               </div>
             </div>
@@ -407,7 +421,7 @@
                   <span class="date">2019. 02</span>
                 </span>
                 <div class="thumb_wrap">
-                  <img src="images/main/awards/thumb3.jpg" alt="성균관대 C-SCHOOL 융합기초프로젝트 수상 판넬">
+                  <img loading="lazy" src="images/main/awards/thumb3.jpg" alt="성균관대 C-SCHOOL 융합기초프로젝트 수상 판넬">
                 </div>
               </div>
             </div>
@@ -421,7 +435,7 @@
                   <span class="date">2018. 09</span>
                 </span>
                 <div class="thumb_wrap">
-                  <img src="images/main/awards/thumb4.jpg" alt="김가네 신메뉴 홍보 영상 공모전 수상자 발표 내역">
+                  <img loading="lazy" src="images/main/awards/thumb4.jpg" alt="김가네 신메뉴 홍보 영상 공모전 수상자 발표 내역">
                 </div>
               </div>
             </div>
@@ -435,7 +449,7 @@
                   <span class="date">2018. 08</span>
                 </span>
                 <div class="thumb_wrap">
-                  <img class="btm" src="images/main/awards/thumb5.jpg" alt="서울공공자전거 따릉이 서포터즈 상장">
+                  <img class="btm" loading="lazy" src="images/main/awards/thumb5.jpg" alt="서울공공자전거 따릉이 서포터즈 상장">
                 </div>
               </div>
             </div>
@@ -466,15 +480,15 @@
         <strong>언제든지 연락주세요!</strong>
       </div>
       <div class="contact_bg">
-        <img src="images/main/contact/full_heart.png" alt="하트 배경">
-        <img src="images/main/contact/line_heart.png" alt="하트 선">
-        <img src="images/main/contact/full_heart.png" alt="하트 배경">
-        <img src="images/main/contact/line_heart.png" alt="하트 선">
+        <img loading="lazy" src="images/main/contact/full_heart.png" alt="하트 배경">
+        <img loading="lazy" src="images/main/contact/line_heart.png" alt="하트 선">
+        <img loading="lazy" src="images/main/contact/full_heart.png" alt="하트 배경">
+        <img loading="lazy" src="images/main/contact/line_heart.png" alt="하트 선">
 
-        <img src="images/main/contact/line_heart.png" alt="하트 선">
-        <img src="images/main/contact/full_heart.png" alt="하트 배경">
-        <img src="images/main/contact/line_heart.png" alt="하트 선">
-        <img src="images/main/contact/full_heart.png" alt="하트 배경">
+        <img loading="lazy" src="images/main/contact/line_heart.png" alt="하트 선">
+        <img loading="lazy" src="images/main/contact/full_heart.png" alt="하트 배경">
+        <img loading="lazy" src="images/main/contact/line_heart.png" alt="하트 선">
+        <img loading="lazy" src="images/main/contact/full_heart.png" alt="하트 배경">
       </div>
     </div>
   </section>
@@ -482,7 +496,7 @@
   <footer>
     <div class="wrap">
       <div class="mb8">
-        <a href="index.html"><img src="images/common/favicon.ico" alt="포트폴리오 사이트 로고"></a>
+        <a href="index.html"><img loading="lazy" src="images/common/favicon.ico" alt="포트폴리오 사이트 로고"></a>
       </div>
       <div class="mb20">
         <strong>Zoe's Web - Portfolio</strong>
